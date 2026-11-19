@@ -1,0 +1,55 @@
+import type { Metadata, Viewport } from "next";
+import { Inter, Inter_Tight, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { Providers } from "@/components/Providers";
+import { profile, seo, siteUrl } from "@/content/site";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const display = Inter_Tight({ subsets: ["latin"], variable: "--font-display-face", display: "swap" });
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-serif-face",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: { default: seo.title, template: `%s | ${profile.name}` },
+  description: seo.description,
+  alternates: { canonical: "/" },
+  authors: [{ name: profile.name }],
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "/",
+    siteName: profile.name,
+    title: seo.title,
+    description: seo.description,
+  },
+  twitter: { card: "summary_large_image", title: seo.title, description: seo.description },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0b1120",
+  colorScheme: "dark",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="en-GB" className={`${inter.variable} ${display.variable} ${serif.variable}`}>
+      <body className="min-h-screen overflow-x-hidden">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-blue focus:px-4 focus:py-2 focus:text-white"
+        >
+          Skip to content
+        </a>
+        <Providers>{children}</Providers>
+        <Analytics />
+      </body>
+    </html>
+  );
+}

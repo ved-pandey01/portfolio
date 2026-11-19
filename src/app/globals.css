@@ -111,3 +111,9 @@ body {
 .rise-2 { animation-delay: 0.15s; }
 .rise-3 { animation-delay: 0.25s; }
 .rise-4 { animation-delay: 0.35s; }
+
+/* Architecture diagram: a dot travels along each connector. */
+@keyframes travel-x { from { left: 0%; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } to { left: 100%; opacity: 0; } }
+@keyframes travel-y { from { top: 0%; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } to { top: 100%; opacity: 0; } }
+.flow-dot { animation: travel-y 2.4s ease-in-out infinite; }
+@media (min-width: 768px) { .flow-dot { animation-name: travel-x; } }

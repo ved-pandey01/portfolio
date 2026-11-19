@@ -9,16 +9,16 @@ export function Hero() {
       <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
       <div
         aria-hidden
-        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(59_130_246/0.28),transparent)] blur-2xl"
+        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(59_130_246/0.28),transparent)]"
       />
       <div
         aria-hidden
-        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.16),transparent)] blur-2xl"
+        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.16),transparent)]"
       />
 
       <Container className="flex flex-col items-start">
         <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-emerald/30 bg-emerald/10 px-3.5 py-1.5 text-sm text-emerald-soft">
-          <span aria-hidden className="size-2 rounded-full bg-emerald animate-pulse-dot" />
+          <span aria-hidden className="size-2 rounded-full bg-emerald pulse-dot" />
           {profile.status}
         </p>
 

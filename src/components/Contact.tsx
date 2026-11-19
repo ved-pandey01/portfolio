@@ -54,7 +54,7 @@ export function Contact() {
     <section id="contact" aria-labelledby="contact-title" className="relative isolate scroll-mt-16 overflow-hidden py-24 sm:py-32">
       <div
         aria-hidden
-        className="absolute bottom-[-14rem] left-1/2 -z-10 h-[30rem] w-[min(56rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(37_99_235/0.25),transparent)] blur-2xl"
+        className="absolute bottom-[-14rem] left-1/2 -z-10 h-[30rem] w-[min(56rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(37_99_235/0.25),transparent)]"
       />
       <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <Reveal>

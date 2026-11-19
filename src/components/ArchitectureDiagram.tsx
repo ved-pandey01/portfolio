@@ -33,7 +33,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
             {i < steps.length - 1 ? (
               <div aria-hidden className="relative mx-auto h-7 w-px bg-line-2 md:mx-2 md:h-px md:w-8 md:shrink-0">
                 <span
-                  className="flow-dot absolute size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-soft shadow-[0_0_10px_2px_rgb(96_165_250/0.7)] max-md:left-1/2 md:top-1/2"
+                  className="flow-dot absolute size-1.5 rounded-full bg-blue-soft shadow-[0_0_10px_2px_rgb(96_165_250/0.7)]"
                   style={{ animationDelay: `${i * 0.4}s` }}
                 />
               </div>

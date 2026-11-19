@@ -11,7 +11,7 @@ export function ResearchTeaser() {
           <div aria-hidden className="bg-grid absolute inset-0 -z-10 opacity-60" />
           <div
             aria-hidden
-            className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.18),transparent)] blur-2xl"
+            className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.18),transparent)]"
           />
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex justify-center">
@@ -43,7 +43,7 @@ export function ResearchTeaser() {
               <button
                 type="submit"
                 disabled
-                className="relative h-12 cursor-not-allowed overflow-hidden rounded-full border border-line-2 bg-[linear-gradient(110deg,#111827_40%,#1e3a5f_50%,#111827_60%)] bg-[length:200%_100%] px-6 text-sm font-medium text-body animate-shimmer"
+                className="shimmer h-12 cursor-not-allowed rounded-full border border-line-2 bg-surface px-6 text-sm font-medium text-body"
               >
                 {researchTeaser.button}
               </button>

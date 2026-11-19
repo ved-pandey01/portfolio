@@ -117,3 +117,10 @@ body {
 @keyframes travel-y { from { top: 0%; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } to { top: 100%; opacity: 0; } }
 .flow-dot { animation: travel-y 2.4s ease-in-out infinite; }
 @media (min-width: 768px) { .flow-dot { animation-name: travel-x; } }
+
+@media print {
+  .card, .bg-grid { background: none !important; border-color: #ccc !important; box-shadow: none !important; }
+  .text-ink, .text-body, .text-muted { color: #111 !important; }
+  .text-blue-soft, .text-emerald-soft { color: #1d4ed8 !important; }
+  main { padding-top: 0 !important; }
+}

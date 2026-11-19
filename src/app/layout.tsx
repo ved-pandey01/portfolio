@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight, Instrument_Serif } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { CommandMenu } from "@/components/CommandMenu";
+import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
 import { Providers } from "@/components/Providers";
 import { profile, seo, siteUrl } from "@/content/site";
 import "./globals.css";
@@ -47,7 +50,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Nav />
+          {children}
+          <Footer />
+          <CommandMenu />
+        </Providers>
         <Analytics />
       </body>
     </html>

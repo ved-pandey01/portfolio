@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ved Prakash Pandey: portfolio
 
-## Getting Started
+Next.js (App Router), Tailwind CSS and Framer Motion. Static, no backend, no environment variables.
 
-First, run the development server:
+## Edit content
+Every word, link and number is in [`src/content/site.ts`](src/content/site.ts).
+Search that file for `PLACEHOLDER` to find what still needs a real value.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+House style: British English, no emojis, no em dashes, short and confident, never invent facts or numbers.
+
+## Add assets
+| What | Where |
+|---|---|
+| CV | Replace `public/cv/Ved-Prakash-Pandey-CV.pdf` (keep the file name) |
+| Screenshots | Put PNGs in `public/work/` and set `screenshot` on the case study (`src`, `alt`, `width`, `height`) |
+| Loom videos | Paste the Loom share URL into `loom` on the case study |
+| Live links | Set `href` and remove `placeholder: true` in the case study `links` |
+| Toolkit logos | Add a [simple-icons](https://simpleicons.org) name to `toolkit`, and the import to `ICONS` in `src/components/About.tsx`. Omit `icon` for a text chip |
+
+## Run locally
+```
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy to Vercel
+1. Push this folder to a GitHub repository.
+2. In Vercel, choose **Add New > Project**, import the repository and press **Deploy**. No settings needed.
+3. In the project, open **Analytics** and enable it (the `<Analytics />` component is already in the layout).
+4. Set `siteUrl` in `site.ts` to your live domain, so the sitemap and social cards use it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Shortcuts
+- `Cmd+K` (or `Ctrl+K`) opens the quick menu. On mobile, use the button in the top bar.
+- `/recruiters` is a one-page, print-friendly summary for recruiters.

@@ -1,0 +1,60 @@
+import { ArrowDown, Download, Mail } from "lucide-react";
+import { profile } from "@/content/site";
+import { ButtonLink, Container } from "./ui";
+
+export function Hero() {
+  return (
+    <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pb-20 pt-32 sm:pb-28 sm:pt-44">
+      {/* Background: grid and soft glows */}
+      <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(59_130_246/0.28),transparent)] blur-2xl"
+      />
+      <div
+        aria-hidden
+        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.16),transparent)] blur-2xl"
+      />
+
+      <Container className="flex flex-col items-start">
+        <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-emerald/30 bg-emerald/10 px-3.5 py-1.5 text-sm text-emerald-soft">
+          <span aria-hidden className="size-2 rounded-full bg-emerald animate-pulse-dot" />
+          {profile.status}
+        </p>
+
+        <h1
+          id="hero-title"
+          className="rise rise-2 mt-8 max-w-4xl font-display text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] text-ink text-balance sm:text-7xl lg:text-[5.5rem]"
+        >
+          {profile.headline.lead}{" "}
+          <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.01em] text-gradient">
+            {profile.headline.accent}
+          </span>
+        </h1>
+
+        <p className="rise rise-3 mt-7 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
+          <span className="text-body">{profile.positioning}</span> {profile.intro}
+        </p>
+
+        <div className="rise rise-4 mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+          <ButtonLink href="#work">
+            View work <ArrowDown size={16} aria-hidden />
+          </ButtonLink>
+          <ButtonLink href={profile.cv} variant="secondary" download>
+            <Download size={16} aria-hidden /> Download CV
+          </ButtonLink>
+          <ButtonLink href="#contact" variant="secondary">
+            <Mail size={16} aria-hidden /> Contact
+          </ButtonLink>
+        </div>
+
+        <p className="rise rise-4 mt-12 hidden items-center gap-2 text-sm text-muted sm:flex">
+          Press
+          <kbd className="rounded border border-line-2 bg-surface px-1.5 py-0.5 font-mono text-xs text-body">Cmd</kbd>
+          <kbd className="rounded border border-line-2 bg-surface px-1.5 py-0.5 font-mono text-xs text-body">K</kbd>
+          to get around
+        </p>
+      </Container>
+    </section>
+  );
+}

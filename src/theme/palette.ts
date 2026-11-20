@@ -23,7 +23,6 @@ export const palette = {
   buttonText: "#14120F", // main button text
   buttonHover: "#F5F1EA", // main button fill on hover
   status: "#22C55E", // the "open to roles" status dot only
-  pillBorder: "#34302A", // hero link pills
 };
 
 // Translucent tints derived from the colours above (0 to 1).
@@ -67,7 +66,6 @@ export const cssVariables = {
   "--button-text": palette.buttonText,
   "--button-hover": palette.buttonHover,
   "--status": palette.status,
-  "--pill-border": palette.pillBorder,
   "--accent-soft": rgba(palette.accent, alpha.accentSoft),
   "--selection": rgba(palette.accent, alpha.selection),
   "--hero-glow": rgba(palette.accent, alpha.heroGlow),

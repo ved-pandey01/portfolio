@@ -77,6 +77,8 @@ export type CaseStudy = {
   id: string;
   name: string;
   tagline: string;
+  // Thin row of key facts under the title. Facts from the README and code only.
+  facts: string[];
   stack: string[];
   problem: string;
   built: string;
@@ -95,6 +97,7 @@ export const caseStudies: CaseStudy[] = [
     id: "whynow",
     name: "WhyNow",
     tagline: "AI account research agent. Know the fit. Know the moment.",
+    facts: ["410 tests", "15/15 companies matched", "PDF + CSV export", "3 persona emails", "every fact sourced"],
     stack: ["Python", "Streamlit", "Gemini", "Tavily", "Companies House API"],
     problem:
       "SDRs often spend 20 to 30 minutes researching each account before they write a single line.",
@@ -129,6 +132,7 @@ export const caseStudies: CaseStudy[] = [
     id: "inbound-lead-engine",
     name: "Inbound Lead Engine",
     tagline: "Scores, routes and follows up every inbound lead.",
+    facts: ["29-node n8n workflow", "15-lead test batch", "AI score + reasoning", "5 lead statuses", "4 SQL reports"],
     stack: ["n8n", "Clay", "Gemini", "HubSpot", "SQLite"],
     problem:
       "Inbound leads sit in an inbox for hours, reps chase leads that never fitted, and follow-ups get forgotten.",

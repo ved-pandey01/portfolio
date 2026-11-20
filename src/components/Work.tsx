@@ -26,6 +26,14 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
             {study.name}
           </h3>
           <p className="mt-2 text-lg text-muted">{study.tagline}</p>
+          <p aria-label="Key facts" className="mt-3 flex flex-wrap gap-x-2 gap-y-1 font-mono text-xs text-muted">
+            {study.facts.map((f, i) => (
+              <span key={f} className="whitespace-nowrap">
+                {i > 0 ? <span aria-hidden className="mr-2 text-accent">·</span> : null}
+                {f}
+              </span>
+            ))}
+          </p>
           <ul aria-label="Stack" className="mt-5 flex flex-wrap gap-2">
             {study.stack.map((s) => (
               <li key={s}>

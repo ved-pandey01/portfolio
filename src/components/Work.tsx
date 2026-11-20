@@ -18,7 +18,7 @@ function Block({ label, children }: { label: string; children: React.ReactNode }
 function Study({ study, index }: { study: CaseStudy; index: number }) {
   return (
     <article id={study.id} aria-labelledby={`${study.id}-title`} className="scroll-mt-24">
-      <Reveal className="flex flex-col gap-6 border-t border-line pt-10 md:flex-row md:items-end md:justify-between">
+      <Reveal className="flex flex-col gap-6 border-t border-line pt-8 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
           <p className="font-mono text-sm text-accent">{String(index + 1).padStart(2, "0")}</p>
           <h3 id={`${study.id}-title`} className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
@@ -56,7 +56,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
         </div>
       </Reveal>
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
+      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
         <Reveal className="flex flex-col gap-7">
           <Block label="Problem">{study.problem}</Block>
           <Block label="What I built">{study.built}</Block>
@@ -93,7 +93,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
 
 export function Work() {
   return (
-    <section id="work" aria-labelledby="work-title" className="scroll-mt-16 py-24 sm:py-32">
+    <section id="work" aria-labelledby="work-title" className="scroll-mt-16 py-16 sm:py-20">
       <Container>
         <Reveal>
           <SectionHeading
@@ -103,7 +103,7 @@ export function Work() {
             body="Real systems, built end to end. Each one starts with a real sales problem."
           />
         </Reveal>
-        <div className="mt-16 flex flex-col gap-24">
+        <div className="mt-10 flex flex-col gap-16">
           {caseStudies.map((s, i) => (
             <Study key={s.id} study={s} index={i} />
           ))}

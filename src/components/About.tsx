@@ -78,12 +78,12 @@ function ToolkitWall() {
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="scroll-mt-16 border-t border-line py-24 sm:py-32">
+    <section id="about" aria-labelledby="about-title" className="scroll-mt-16 border-t border-line py-16 sm:py-20">
       <Container>
         <Reveal>
           <SectionHeading id="about-title" eyebrow="About" title={about.title} body={about.body} />
         </Reveal>
-        <div className="mt-16 grid gap-16 lg:grid-cols-2">
+        <div className="mt-10 grid gap-10 lg:grid-cols-2">
           <div>
             <h3 className="mb-8 font-mono text-xs uppercase tracking-widest text-muted">Career</h3>
             <Timeline />

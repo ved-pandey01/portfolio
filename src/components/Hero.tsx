@@ -4,7 +4,7 @@ import { ButtonLink, Container } from "./ui";
 
 export function Hero() {
   return (
-    <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pb-20 pt-32 sm:pb-28 sm:pt-44">
+    <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pb-10 pt-24 sm:pb-14 sm:pt-28">
       {/* Background: grid and soft glows */}
       <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
       <div
@@ -24,24 +24,24 @@ export function Hero() {
 
         <h1
           id="hero-title"
-          className="rise rise-2 mt-7 font-display text-[2.75rem] font-semibold leading-[1] tracking-[-0.04em] text-ink sm:text-7xl lg:text-[5.25rem]"
+          className="rise rise-2 mt-6 font-display text-[2.75rem] font-semibold leading-[1] tracking-[-0.04em] text-ink sm:text-7xl lg:text-[5.25rem]"
         >
           {profile.name}
         </h1>
         <p className="rise rise-2 mt-4 font-mono text-sm text-muted sm:text-base">{profile.subline}</p>
 
-        <p className="rise rise-3 mt-7 max-w-3xl font-display text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.03em] text-ink text-balance sm:text-5xl lg:text-[3.6rem]">
+        <p className="rise rise-3 mt-6 max-w-3xl font-display text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.03em] text-ink text-balance sm:text-5xl lg:text-[3.6rem]">
           {profile.headline.lead}{" "}
           <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.01em] text-accent">
             {profile.headline.accent}
           </span>
         </p>
 
-        <p className="rise rise-3 mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
+        <p className="rise rise-3 mt-5 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
           <span className="text-body">{profile.positioning}</span> {profile.intro}
         </p>
 
-        <div className="rise rise-4 mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+        <div className="rise rise-4 mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           <ButtonLink href="#work">
             View work <ArrowDown size={16} aria-hidden />
           </ButtonLink>
@@ -53,7 +53,7 @@ export function Hero() {
           </ButtonLink>
         </div>
 
-        <p className="rise rise-4 mt-12 hidden items-center gap-2 text-sm text-muted sm:flex">
+        <p className="rise rise-4 mt-7 hidden items-center gap-2 text-sm text-muted sm:flex">
           Press
           <kbd className="rounded border border-line bg-raised px-1.5 py-0.5 font-mono text-xs text-body">Cmd</kbd>
           <kbd className="rounded border border-line bg-raised px-1.5 py-0.5 font-mono text-xs text-body">K</kbd>

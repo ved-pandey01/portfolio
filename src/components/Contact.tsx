@@ -51,12 +51,12 @@ export function ContactLinks() {
 
 export function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative isolate scroll-mt-16 overflow-hidden py-24 sm:py-32">
+    <section id="contact" aria-labelledby="contact-title" className="relative isolate scroll-mt-16 overflow-hidden py-12 sm:py-16">
       <div
         aria-hidden
         className="absolute bottom-[-14rem] left-1/2 -z-10 h-[30rem] w-[min(56rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
       />
-      <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <Container className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <Eyebrow>Contact</Eyebrow>
           <h2 id="contact-title" className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">

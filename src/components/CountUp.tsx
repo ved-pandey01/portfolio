@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 export function CountUp({ from = 0, to, prefix = "", suffix = "" }: { from?: number; to: number; prefix?: string; suffix?: string }) {
   const wrap = useRef<HTMLSpanElement>(null);
   const num = useRef<HTMLSpanElement>(null);
-  const inView = useInView(wrap, { once: true, margin: "0px 0px -80px 0px" });
+  const inView = useInView(wrap, { once: true });
   const reduce = useReducedMotion();
   const armed = useRef(false);
 

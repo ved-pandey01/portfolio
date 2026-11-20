@@ -4,8 +4,8 @@ import { Container, SectionHeading } from "./ui";
 
 export function Now() {
   return (
-    <section id="now" aria-labelledby="now-title" className="scroll-mt-16 py-24 sm:py-32">
-      <Container className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+    <section id="now" aria-labelledby="now-title" className="scroll-mt-16 py-16 sm:py-20">
+      <Container className="grid gap-8 lg:grid-cols-[1fr_1.4fr]">
         <Reveal>
           <SectionHeading id="now-title" eyebrow="Now" title="What I’m building this month." />
           <p className="mt-6 inline-flex items-center gap-2 font-mono text-xs text-muted">

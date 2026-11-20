@@ -18,7 +18,7 @@ function statText(s: (typeof stats)[number]) {
 
 export default function RecruitersPage() {
   return (
-    <main id="main" className="relative isolate pb-24 pt-28 sm:pt-36">
+    <main id="main" className="relative isolate pb-16 pt-24 sm:pt-28">
       <div aria-hidden className="bg-grid absolute inset-x-0 top-0 -z-10 h-[32rem]" />
       <Container className="max-w-4xl">
         <Eyebrow>For recruiters</Eyebrow>
@@ -36,7 +36,7 @@ export default function RecruitersPage() {
           </p>
         </div>
 
-        <section aria-labelledby="summary-title" className="card mt-12 p-6 sm:p-8">
+        <section aria-labelledby="summary-title" className="card mt-8 p-6 sm:p-8">
           <h2 id="summary-title" className="font-mono text-xs uppercase tracking-widest text-accent">
             {recruiter.title}
           </h2>
@@ -78,7 +78,7 @@ export default function RecruitersPage() {
           </section>
         </div>
 
-        <section aria-labelledby="reach-title" className="mt-12">
+        <section aria-labelledby="reach-title" className="mt-8">
           <h2 id="reach-title" className="mb-5 font-mono text-xs uppercase tracking-widest text-accent">
             Contact
           </h2>

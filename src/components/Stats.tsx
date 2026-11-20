@@ -4,7 +4,7 @@ import { Container } from "./ui";
 
 export function Stats() {
   return (
-    <section aria-label="Proof" className="relative py-8 sm:py-12">
+    <section aria-label="Proof" className="relative py-5 sm:py-8">
       <Container>
         <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {stats.map((s, i) => (

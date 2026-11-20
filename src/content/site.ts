@@ -124,7 +124,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "inbound-lead-engine",
     name: "Inbound Lead Engine",
-    tagline: "Scores, routes and follows up every inbound lead in minutes.",
+    tagline: "Scores, routes and follows up every inbound lead.",
     stack: ["n8n", "Clay", "Gemini", "HubSpot", "SQLite"],
     problem:
       "Inbound leads sit in an inbox for hours, reps chase leads that never fitted, and follow-ups get forgotten.",

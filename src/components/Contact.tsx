@@ -7,7 +7,7 @@ import { Container, Eyebrow } from "./ui";
 import { Backdrop } from "./Backdrop";
 
 const rowCls =
-  "group flex items-center gap-4 rounded-2xl border border-line bg-surface/80 p-4 transition-colors hover:border-accent/50 hover:bg-raised sm:p-5";
+  "depth group flex items-center gap-4 rounded-2xl border border-line p-4 transition-colors sm:p-5";
 
 export function ContactLinks() {
   return (

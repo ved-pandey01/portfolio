@@ -35,7 +35,7 @@ export default function RecruitersPage() {
           </p>
         </div>
 
-        <section aria-labelledby="summary-title" className="card mt-8 p-6 sm:p-8">
+        <section aria-labelledby="summary-title" className="card depth depth-static mt-8 p-6 sm:p-8">
           <h2 id="summary-title" className="font-mono text-xs uppercase tracking-widest text-accent">
             {recruiter.title}
           </h2>
@@ -55,7 +55,7 @@ export default function RecruitersPage() {
           </h2>
           <ul className="mt-5 grid gap-4 md:grid-cols-3">
             {recruiter.whyHire.map((w) => (
-              <li key={w.title} className="card p-5 sm:p-6">
+              <li key={w.title} className="card depth p-5 sm:p-6">
                 <h3 className="font-display text-lg font-semibold text-ink">{w.title}</h3>
                 <p className="mt-2 text-muted">{w.body}</p>
               </li>
@@ -77,7 +77,7 @@ export default function RecruitersPage() {
         </section>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <section aria-labelledby="facts-title" className="card p-6 sm:p-8">
+          <section aria-labelledby="facts-title" className="card depth depth-static p-6 sm:p-8">
             <h2 id="facts-title" className="font-mono text-xs uppercase tracking-widest text-accent">
               Key facts
             </h2>
@@ -90,7 +90,7 @@ export default function RecruitersPage() {
               ))}
             </dl>
           </section>
-          <section aria-labelledby="proof-title" className="card p-6 sm:p-8">
+          <section aria-labelledby="proof-title" className="card depth depth-static p-6 sm:p-8">
             <h2 id="proof-title" className="font-mono text-xs uppercase tracking-widest text-accent">
               Proof
             </h2>

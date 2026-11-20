@@ -17,7 +17,7 @@ export function Now() {
         </Reveal>
         <ol className="flex flex-col gap-3">
           {now.items.map((item, i) => (
-            <Reveal as="li" key={item.title} delay={i * 0.07} className="card flex gap-5 p-5 sm:p-6">
+            <Reveal as="li" key={item.title} delay={i * 0.07} className="card depth flex gap-5 p-5 sm:p-6">
               <span className="font-mono text-sm text-accent">{String(i + 1).padStart(2, "0")}</span>
               <div>
                 <h3 className="font-medium text-ink">{item.title}</h3>

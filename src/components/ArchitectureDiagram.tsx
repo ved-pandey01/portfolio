@@ -3,7 +3,7 @@ import type { DiagramStep } from "@/content/site";
 // Simple left-to-right flow (top-to-bottom on mobile), driven by data in site.ts.
 export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; label: string }) {
   return (
-    <figure className="card overflow-hidden p-4 sm:p-6">
+    <figure className="card depth depth-static overflow-hidden p-4 sm:p-6">
       <figcaption className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">Architecture</figcaption>
       <ol aria-label={`${label} architecture`} className="flex flex-col items-stretch md:flex-row md:items-stretch">
         {steps.map((step, i) => (

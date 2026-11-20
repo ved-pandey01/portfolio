@@ -73,7 +73,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
       </Reveal>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
-        <Reveal className="card p-6">
+        <Reveal className="card depth p-6">
           <h4 className="font-mono text-xs uppercase tracking-widest text-accent">Result</h4>
           <ul className="mt-4 space-y-3">
             {study.result.map((r) => (

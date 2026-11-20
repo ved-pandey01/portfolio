@@ -12,7 +12,7 @@ export function Stats() {
           {stats.map((s, i) => (
             <li
               key={s.label}
-              className="rise card stat-card p-5 sm:p-8"
+              className="rise card depth stat-card p-5 sm:p-8"
               style={{ animationDelay: `${0.4 + i * 0.08}s` }}
             >
               <p className="text-sm text-muted">{s.label}</p>

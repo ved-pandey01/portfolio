@@ -111,6 +111,10 @@ body {
 .depth:hover {
   border-color: color-mix(in srgb, var(--accent) 70%, transparent);
 }
+/* Large containers (diagram panels, media frames, recruiter panels) keep the depth but not the hover border. */
+.depth-static:hover {
+  border-color: var(--line);
+}
 
 /* Architecture diagram connectors: brighter champagne line, and a light pulse
    (glowing dot with a short tail) that travels box 01 > 02 > 03 > 04 in turn.
@@ -238,7 +242,7 @@ body::after {
 }
 .stat-card:hover {
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent), 0 0 32px -6px var(--card-glow);
+  box-shadow: inset 0 1px 0 var(--rim), 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent), 0 0 32px -6px var(--card-glow), 0 12px 28px -14px var(--depth-shadow);
 }
 
 @media (prefers-reduced-motion: reduce) {

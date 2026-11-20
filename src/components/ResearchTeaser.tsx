@@ -9,7 +9,7 @@ export function ResearchTeaser() {
     <section aria-labelledby="research-title" className="section py-8 sm:py-10">
       <Backdrop divider glow="left" />
       <Container>
-        <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line bg-surface px-6 py-10 sm:px-12 sm:py-12">
+        <Reveal className="relative isolate overflow-hidden depth depth-static rounded-3xl border border-line px-6 py-10 sm:px-12 sm:py-12">
           <div aria-hidden className="bg-dots absolute inset-0 -z-10" />
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex justify-center">

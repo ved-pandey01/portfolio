@@ -45,6 +45,7 @@ const alpha = {
   growthLine: 0.045, // "growth" curves behind Work
   contourLine: 0.05, // upward contour lines behind the stats
   divider: 0.35, // fading hairline between sections (at its brightest point)
+  frameBorder: 0.5, // champagne border around case study screenshots
 };
 
 function rgba(hex: string, a: number) {
@@ -84,4 +85,5 @@ export const cssVariables = {
   "--growth-line": rgba(palette.accent, alpha.growthLine),
   "--contour-line": rgba(palette.accent, alpha.contourLine),
   "--divider": rgba(palette.accent, alpha.divider),
+  "--frame-border": rgba(palette.accent, alpha.frameBorder),
 } as React.CSSProperties;

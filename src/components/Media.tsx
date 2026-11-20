@@ -2,9 +2,9 @@ import { ImageIcon, PlayCircle } from "lucide-react";
 import type { CaseStudy } from "@/content/site";
 import { ZoomableImage } from "./ZoomableImage";
 
-function Frame({ children, title }: { children: React.ReactNode; title: string }) {
+function Frame({ children, title, champagne = false }: { children: React.ReactNode; title: string; champagne?: boolean }) {
   return (
-    <div className="card depth depth-static overflow-hidden p-0">
+    <div className={`card depth depth-static overflow-hidden p-0 ${champagne ? "frame-champagne" : ""}`}>
       <div className="flex items-center gap-2 border-b border-line px-4 py-2.5">
         <span aria-hidden className="flex gap-1.5">
           <span className="size-2.5 rounded-full bg-line" />
@@ -35,7 +35,7 @@ function ComingSoon({ icon, text }: { icon: React.ReactNode; text: string }) {
 
 export function Screenshot({ study }: { study: CaseStudy }) {
   return (
-    <Frame title={study.name}>
+    <Frame title={study.name} champagne>
       {study.screenshot ? (
         <ZoomableImage
           src={study.screenshot.src}

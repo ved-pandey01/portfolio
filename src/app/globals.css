@@ -115,6 +115,14 @@ body {
 .depth-static:hover {
   border-color: var(--line);
 }
+/* Case study screenshots: champagne frame, same soft shadow as the cards. */
+.frame-champagne,
+.frame-champagne:hover {
+  border-color: var(--frame-border);
+}
+.frame-champagne > div:first-child {
+  border-bottom-color: var(--frame-border);
+}
 
 /* Architecture diagram connectors: brighter champagne line, and a light pulse
    (glowing dot with a short tail) that travels box 01 > 02 > 03 > 04 in turn.

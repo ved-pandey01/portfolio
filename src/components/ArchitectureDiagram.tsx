@@ -5,9 +5,9 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
   return (
     <figure className="card overflow-hidden p-4 sm:p-6">
       <figcaption className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">Architecture</figcaption>
-      <ol aria-label={`${label} architecture`} className="flex flex-col items-stretch md:flex-row md:items-center">
+      <ol aria-label={`${label} architecture`} className="flex flex-col items-stretch md:flex-row md:items-stretch">
         {steps.map((step, i) => (
-          <li key={step.title} className="flex flex-col md:flex-1 md:flex-row md:items-center">
+          <li key={step.title} className="flex flex-col md:flex-1 md:flex-row md:items-stretch">
             <div className="flex-1 rounded-xl border border-line bg-bg/70 p-3.5">
               <p className="font-mono text-[11px] uppercase tracking-widest text-accent">
                 {String(i + 1).padStart(2, "0")} {step.title}
@@ -28,7 +28,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
               </ul>
             </div>
             {i < steps.length - 1 ? (
-              <div aria-hidden className="relative mx-auto h-7 w-px bg-line md:mx-2 md:h-px md:w-8 md:shrink-0">
+              <div aria-hidden className="relative mx-auto h-7 w-px shrink-0 bg-line md:mx-2 md:h-px md:w-8 md:self-center">
                 <span
                   className="flow-dot absolute size-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_var(--accent-glow)]"
                   style={{ animationDelay: `${i * 0.4}s` }}

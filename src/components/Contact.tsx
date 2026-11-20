@@ -4,6 +4,7 @@ import { CopyEmail } from "./CopyEmail";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { Reveal } from "./Reveal";
 import { Container, Eyebrow } from "./ui";
+import { Backdrop } from "./Backdrop";
 
 const rowCls =
   "group flex items-center gap-4 rounded-2xl border border-line bg-surface/80 p-4 transition-colors hover:border-accent/50 hover:bg-raised sm:p-5";
@@ -51,7 +52,8 @@ export function ContactLinks() {
 
 export function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative isolate scroll-mt-16 overflow-hidden py-12 sm:py-16">
+    <section id="contact" aria-labelledby="contact-title" className="section scroll-mt-16 py-12 sm:py-16">
+      <Backdrop divider rising />
       <Container className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <Reveal>
           <Eyebrow>Contact</Eyebrow>

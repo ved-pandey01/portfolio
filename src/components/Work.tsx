@@ -5,6 +5,7 @@ import { GithubIcon } from "./Icons";
 import { Loom, Screenshot } from "./Media";
 import { Reveal } from "./Reveal";
 import { ButtonLink, Chip, Container, SectionHeading } from "./ui";
+import { Backdrop } from "./Backdrop";
 
 function Block({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -93,7 +94,8 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
 
 export function Work() {
   return (
-    <section id="work" aria-labelledby="work-title" className="scroll-mt-16 py-16 sm:py-20">
+    <section id="work" aria-labelledby="work-title" className="section scroll-mt-16 py-16 sm:py-20">
+      <Backdrop divider glow="right" growth />
       <Container>
         <Reveal>
           <SectionHeading

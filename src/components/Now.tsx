@@ -1,10 +1,12 @@
 import { now } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Container, SectionHeading } from "./ui";
+import { Backdrop } from "./Backdrop";
 
 export function Now() {
   return (
-    <section id="now" aria-labelledby="now-title" className="scroll-mt-16 py-16 sm:py-20">
+    <section id="now" aria-labelledby="now-title" className="section scroll-mt-16 py-16 sm:py-20">
+      <Backdrop divider glow="right" dots />
       <Container className="grid gap-8 lg:grid-cols-[1fr_1.4fr]">
         <Reveal>
           <SectionHeading id="now-title" eyebrow="Now" title="What I’m building this month." />

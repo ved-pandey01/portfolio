@@ -2,10 +2,12 @@ import { Search, Sparkles } from "lucide-react";
 import { researchTeaser } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Container, Eyebrow } from "./ui";
+import { Backdrop } from "./Backdrop";
 
 export function ResearchTeaser() {
   return (
-    <section aria-labelledby="research-title" className="py-8 sm:py-10">
+    <section aria-labelledby="research-title" className="section py-8 sm:py-10">
+      <Backdrop divider glow="left" />
       <Container>
         <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line bg-surface px-6 py-10 sm:px-12 sm:py-12">
           <div aria-hidden className="bg-dots absolute inset-0 -z-10" />

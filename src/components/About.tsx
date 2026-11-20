@@ -2,6 +2,7 @@ import { siClaude, siGooglegemini, siHubspot, siN8n, siPython, type SimpleIcon }
 import { about, timeline, toolkit } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Container, SectionHeading } from "./ui";
+import { Backdrop } from "./Backdrop";
 
 // Add an entry here if you add a new simple-icons logo to `toolkit` in site.ts.
 const ICONS: Record<string, SimpleIcon> = { siClaude, siGooglegemini, siHubspot, siN8n, siPython };
@@ -83,7 +84,8 @@ function ToolkitWall() {
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-title" className="scroll-mt-16 border-t border-line py-16 sm:py-20">
+    <section id="about" aria-labelledby="about-title" className="section scroll-mt-16 py-16 sm:py-20">
+      <Backdrop divider glow="left" dots />
       <Container>
         <Reveal>
           <SectionHeading id="about-title" eyebrow="About" title={about.title} body={about.body} />

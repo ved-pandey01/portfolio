@@ -247,3 +247,47 @@ body::after {
 @media print {
   body::after, .glow, .hairline { display: none !important; }
 }
+
+/* Section backgrounds (see components/Backdrop.tsx). Static: nothing here animates.
+   Sections clip sideways only, so glows fade into neighbouring sections without hard edges. */
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+}
+.section-glow {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: min(46rem, 130vw);
+  height: 34rem;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, var(--section-glow), transparent);
+  pointer-events: none;
+}
+.section-glow-left { left: -18rem; }
+.section-glow-right { right: -18rem; }
+.section-divider {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--divider) 50%, transparent);
+  pointer-events: none;
+}
+.rising-glow {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: -14rem;
+  width: min(64rem, 160vw);
+  height: 30rem;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, var(--rising-glow), transparent);
+  pointer-events: none;
+}
+@media print {
+  .section-glow, .section-divider, .rising-glow { display: none !important; }
+}

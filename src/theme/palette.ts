@@ -40,6 +40,11 @@ const alpha = {
   flowGlow: 0.6, // soft glow around the travelling connector dot
   rim: 0.07, // rim light along the top edge of raised cards (from `heading`)
   depthShadow: 0.6, // soft drop shadow under raised cards (black)
+  sectionGlow: 0.07, // soft glow in each section, alternating sides
+  risingGlow: 0.08, // warm glow rising from the bottom of Contact
+  growthLine: 0.045, // "growth" curves behind Work
+  contourLine: 0.05, // upward contour lines behind the stats
+  divider: 0.35, // fading hairline between sections (at its brightest point)
 };
 
 function rgba(hex: string, a: number) {
@@ -74,4 +79,9 @@ export const cssVariables = {
   "--flow-glow": rgba(palette.accentHover, alpha.flowGlow),
   "--rim": rgba(palette.heading, alpha.rim),
   "--depth-shadow": rgba("#000000", alpha.depthShadow),
+  "--section-glow": rgba(palette.accent, alpha.sectionGlow),
+  "--rising-glow": rgba(palette.accent, alpha.risingGlow),
+  "--growth-line": rgba(palette.accent, alpha.growthLine),
+  "--contour-line": rgba(palette.accent, alpha.contourLine),
+  "--divider": rgba(palette.accent, alpha.divider),
 } as React.CSSProperties;

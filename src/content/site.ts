@@ -189,17 +189,20 @@ export type TimelineItem = { period?: string; title: string; org: string; place?
 
 export const timeline: TimelineItem[] = [
   {
-    // PLACEHOLDER: add dates with `period`, e.g. "2019 to 2022".
+    // PLACEHOLDER: replace YYYY with real years on each item below.
+    period: "YYYY to YYYY",
     title: "Business Development",
     org: "Rose Pharmaco and Omgreek Services",
     place: "India",
   },
   {
+    period: "YYYY to YYYY",
     title: "MSc International Business",
     org: "Anglia Ruskin University",
     place: "UK",
   },
   {
+    period: "YYYY to present",
     title: "GTM Engineering",
     org: "Building AI-powered sales systems",
     place: "Bedford, UK",

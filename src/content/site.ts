@@ -41,8 +41,8 @@ export const profile = {
 // Every email link on the site: opens a new draft with the subject filled in.
 export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.emailSubject)}`;
 
-// PLACEHOLDER: your live domain once deployed (used for SEO, sitemap and social cards).
-export const siteUrl = "https://ved-pandey.vercel.app";
+// Live domain (used for SEO, sitemap and social cards). Update if you add a custom domain.
+export const siteUrl = "https://portfolio-two-lemon-kp20ftvw2b.vercel.app";
 
 export const seo = {
   title: "Ved Prakash Pandey | The SDR who builds his own tools",

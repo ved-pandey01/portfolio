@@ -79,6 +79,16 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
 
       <Reveal className="mt-8">
         <ArchitectureDiagram steps={study.diagram} label={study.name} />
+        <div className="mt-4 flex flex-wrap items-center gap-2">
+          <h4 className="mr-1 font-mono text-[11px] uppercase tracking-widest text-muted">Next up</h4>
+          <ul aria-label={`${study.name}: next up`} className="contents">
+            {study.nextUp.map((n) => (
+              <li key={n} className="rounded-full border border-dashed border-accent/40 px-3 py-1 font-mono text-xs text-body">
+                {n}
+              </li>
+            ))}
+          </ul>
+        </div>
       </Reveal>
 
       <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">

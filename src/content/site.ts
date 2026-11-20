@@ -84,6 +84,8 @@ export type CaseStudy = {
   built: string;
   howItWorks: string;
   diagram: DiagramStep[];
+  // Planned improvements, shown as dashed chips under the diagram.
+  nextUp: string[];
   result: string[];
   links: Link[];
   // Path in /public, or null to show a "coming soon" frame.
@@ -115,6 +117,7 @@ export const caseStudies: CaseStudy[] = [
       { title: "Reasoning", items: ["Gemini"] },
       { title: "Output", items: ["Fit score", "Signals", "Email"] },
     ],
+    nextUp: ["Public live demo", "Markets beyond the UK", "Email capture for extra searches"],
     result: [
       "410 automated tests, run without API keys.",
       "Live test: 15 of 15 UK companies matched on Companies House.",
@@ -167,6 +170,7 @@ export const caseStudies: CaseStudy[] = [
       { title: "Action", items: ["Gmail outreach", "HubSpot"] },
       { title: "Reporting", items: ["SQLite"] },
     ],
+    nextUp: ["Slack alerts for Hot leads", "Weekly SQL pipeline report", "Loom walkthrough"],
     result: [
       "New leads scored and, if Hot, emailed within minutes.",
       "In a 15-lead test batch, 3 Cold leads were filtered out before any rep time was spent.",

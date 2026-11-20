@@ -37,13 +37,14 @@ export function ResearchTeaser() {
                   type="text"
                   disabled
                   placeholder={researchTeaser.inputPlaceholder}
-                  className="h-12 w-full cursor-not-allowed rounded-full border border-line bg-bg/70 pl-11 pr-4 text-ink placeholder:text-muted"
+                  className="h-12 w-full cursor-not-allowed rounded-full border border-line bg-bg/70 pl-11 pr-4 text-ink opacity-70 placeholder:text-muted"
                 />
               </div>
               <button
                 type="submit"
                 disabled
-                className="shimmer h-12 cursor-not-allowed rounded-full border border-line bg-raised px-6 text-sm font-medium text-body"
+                aria-disabled="true"
+                className="h-12 cursor-not-allowed rounded-full border border-dashed border-line bg-transparent px-6 text-sm font-medium text-muted opacity-60"
               >
                 {researchTeaser.button}
               </button>

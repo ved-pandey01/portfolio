@@ -224,9 +224,9 @@ export const whynowUrl: string | null = null;
 export const now = {
   updated: "November 2026", // Update when you edit the list.
   items: [
-    { title: "Shipping WhyNow Stage 1", detail: "Hosting the app and adding a public demo." },
-    { title: "This portfolio", detail: "Built in Next.js with Claude Code." },
-    { title: "Sharpening my GTM stack", detail: "Hands-on practice with Clay, n8n and HubSpot." },
+    { title: "Taking WhyNow live", detail: "A free AI research desk for any UK company. Next: markets beyond the UK." },
+    { title: "Pipeline reporting with SQL", detail: "Turning raw lead data into weekly pipeline insights." },
+    { title: "Sharpening my GTM stack", detail: "Clay, n8n, HubSpot and SQL, hands-on every week." },
   ],
 };
 

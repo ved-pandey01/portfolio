@@ -3,6 +3,7 @@ import { caseStudies, type CaseStudy } from "@/content/site";
 import { ArchitectureDiagram } from "./ArchitectureDiagram";
 import { GithubIcon } from "./Icons";
 import { Loom, Screenshot } from "./Media";
+import { ProductDetails } from "./ProductDetails";
 import { Reveal } from "./Reveal";
 import { ButtonLink, Chip, Container, SectionHeading } from "./ui";
 import { Backdrop } from "./Backdrop";
@@ -80,7 +81,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
         <ArchitectureDiagram steps={study.diagram} label={study.name} />
       </Reveal>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
+      <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
         <Reveal className="card depth p-6">
           <h4 className="font-mono text-xs uppercase tracking-widest text-accent">Result</h4>
           <ul className="mt-4 space-y-3">
@@ -93,7 +94,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
           </ul>
         </Reveal>
         <Reveal delay={0.1}>
-          <Loom study={study} />
+          {study.loom ? <Loom study={study} /> : <ProductDetails study={study} />}
         </Reveal>
       </div>
     </article>

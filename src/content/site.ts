@@ -88,8 +88,12 @@ export type CaseStudy = {
   links: Link[];
   // Path in /public, or null to show a "coming soon" frame.
   screenshot: { src: string; alt: string; width: number; height: number } | null;
-  // Loom share URL (https://www.loom.com/share/...), or null to show a "coming soon" frame.
+  // Loom share URL (https://www.loom.com/share/...). While null, the Product details panel shows instead.
   loom: string | null;
+  // Product details panel: a feature list with icons, or a spec sheet with mono labels.
+  details:
+    | { kind: "features"; title: string; items: { icon: string; label: string }[] }
+    | { kind: "spec"; title: string; rows: { label: string; value: string }[] };
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -112,8 +116,11 @@ export const caseStudies: CaseStudy[] = [
       { title: "Output", items: ["Fit score", "Signals", "Email"] },
     ],
     result: [
-      "Built to cut account research to under a minute.",
-      "Exports a printable PDF and a CRM-ready CSV row.",
+      "410 automated tests, run without API keys.",
+      "Live test: 15 of 15 UK companies matched on Companies House.",
+      "0 unsourced claims in the live test: every fact links to its source.",
+      "About 45 seconds per report, against 20 to 30 minutes by hand.",
+      "PDF report, CRM-ready CSV and ranked research for lists of up to 10 companies.",
     ],
     links: [
       // PLACEHOLDER: live demo URL.
@@ -127,6 +134,20 @@ export const caseStudies: CaseStudy[] = [
       height: 940,
     },
     loom: null, // PLACEHOLDER: Loom walkthrough URL.
+    details: {
+      kind: "features",
+      title: "Product details",
+      items: [
+        { icon: "building", label: "Companies House verification" },
+        { icon: "radar", label: "Buying signals from the last 6 months only" },
+        { icon: "gauge", label: "ICP fit score from 1 to 10" },
+        { icon: "mail", label: "Persona emails: Head of Sales, Head of RevOps or Founder / CEO" },
+        { icon: "message", label: "LinkedIn note and two-line call opener" },
+        { icon: "list", label: "Batch mode: up to 10 companies, ranked by fit" },
+        { icon: "file", label: "PDF report and CRM-ready CSV export" },
+        { icon: "layers", label: "3 backup AI models, each tried once" },
+      ],
+    },
   },
   {
     id: "inbound-lead-engine",
@@ -159,6 +180,20 @@ export const caseStudies: CaseStudy[] = [
       height: 676,
     },
     loom: null, // PLACEHOLDER: Loom walkthrough URL.
+    details: {
+      kind: "spec",
+      title: "Spec sheet",
+      rows: [
+        { label: "Trigger", value: "Google Sheets, checked every minute" },
+        { label: "AI scoring", value: "Gemini returns score (1 to 100), one-sentence reasoning, qualified (true/false)" },
+        { label: "Routing", value: "Hot = score 70+ and qualified. Otherwise Cold" },
+        { label: "Outreach", value: "Personalised Gmail email. AI-drafted reply when a lead responds" },
+        { label: "Follow-up", value: "Waits 2 days, then one nudge if no reply" },
+        { label: "HubSpot", value: "lead_score · lead_score_reasoning · score note" },
+        { label: "SQLite", value: "leads table · Scored, Contacted, Replied, Nudged, Cold" },
+        { label: "Files", value: "workflow.json · schema.sql · reports.sql" },
+      ],
+    },
   },
 ];
 

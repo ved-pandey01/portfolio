@@ -20,7 +20,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
     <article id={study.id} aria-labelledby={`${study.id}-title`} className="scroll-mt-24">
       <Reveal className="flex flex-col gap-6 border-t border-line pt-10 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
-          <p className="font-mono text-sm text-blue-soft">{String(index + 1).padStart(2, "0")}</p>
+          <p className="font-mono text-sm text-accent">{String(index + 1).padStart(2, "0")}</p>
           <h3 id={`${study.id}-title`} className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
             {study.name}
           </h3>
@@ -40,7 +40,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
                 key={l.label}
                 aria-disabled
                 title="Link coming soon"
-                className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-dashed border-line-2 px-5 py-2.5 text-sm text-muted"
+                className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-dashed border-line px-5 py-2.5 text-sm text-muted"
               >
                 {l.label} <span className="font-mono text-[11px]">soon</span>
               </span>
@@ -73,11 +73,11 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
         <Reveal className="card p-6">
-          <h4 className="font-mono text-xs uppercase tracking-widest text-emerald-soft">Result</h4>
+          <h4 className="font-mono text-xs uppercase tracking-widest text-accent">Result</h4>
           <ul className="mt-4 space-y-3">
             {study.result.map((r) => (
               <li key={r} className="flex gap-3 text-body">
-                <Check size={18} aria-hidden className="mt-0.5 shrink-0 text-emerald" />
+                <Check size={18} aria-hidden className="mt-0.5 shrink-0 text-accent" />
                 <span>{r}</span>
               </li>
             ))}

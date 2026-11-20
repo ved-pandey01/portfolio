@@ -6,13 +6,13 @@ import { Reveal } from "./Reveal";
 import { Container, Eyebrow } from "./ui";
 
 const rowCls =
-  "group flex items-center gap-4 rounded-2xl border border-line bg-bg-2/80 p-4 transition-colors hover:border-blue-soft/50 hover:bg-surface sm:p-5";
+  "group flex items-center gap-4 rounded-2xl border border-line bg-surface/80 p-4 transition-colors hover:border-accent/50 hover:bg-raised sm:p-5";
 
 export function ContactLinks() {
   return (
     <ul className="flex flex-col gap-3">
       <li className={rowCls}>
-        <Mail size={20} aria-hidden className="text-blue-soft" />
+        <Mail size={20} aria-hidden className="text-accent" />
         <a href={`mailto:${profile.email}`} className="min-w-0 flex-1 truncate text-ink">
           <span className="block text-xs text-muted">Email</span>
           {profile.email}
@@ -20,8 +20,8 @@ export function ContactLinks() {
         <CopyEmail email={profile.email} />
       </li>
       {[
-        { label: "LinkedIn", value: "Ved Prakash Pandey", href: profile.linkedin, icon: <LinkedinIcon size={20} className="text-blue-soft" /> },
-        { label: "GitHub", value: "ved-pandey01", href: profile.github, icon: <GithubIcon size={20} className="text-blue-soft" /> },
+        { label: "LinkedIn", value: "Ved Prakash Pandey", href: profile.linkedin, icon: <LinkedinIcon size={20} className="text-accent" /> },
+        { label: "GitHub", value: "ved-pandey01", href: profile.github, icon: <GithubIcon size={20} className="text-accent" /> },
       ].map((l) => (
         <li key={l.label}>
           <a href={l.href} target="_blank" rel="noopener noreferrer" className={rowCls}>
@@ -37,7 +37,7 @@ export function ContactLinks() {
       ))}
       <li>
         <a href={profile.cv} download className={rowCls}>
-          <Download size={20} aria-hidden className="text-emerald" />
+          <Download size={20} aria-hidden className="text-accent" />
           <span className="flex-1">
             <span className="block text-xs text-muted">CV</span>
             <span className="text-ink">Download PDF</span>
@@ -54,7 +54,7 @@ export function Contact() {
     <section id="contact" aria-labelledby="contact-title" className="relative isolate scroll-mt-16 overflow-hidden py-24 sm:py-32">
       <div
         aria-hidden
-        className="absolute bottom-[-14rem] left-1/2 -z-10 h-[30rem] w-[min(56rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(37_99_235/0.25),transparent)]"
+        className="absolute bottom-[-14rem] left-1/2 -z-10 h-[30rem] w-[min(56rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
       />
       <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <Reveal>

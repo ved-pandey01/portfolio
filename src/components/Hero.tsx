@@ -9,16 +9,16 @@ export function Hero() {
       <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
       <div
         aria-hidden
-        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(59_130_246/0.28),transparent)]"
+        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
       />
       <div
         aria-hidden
-        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.16),transparent)]"
+        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
       />
 
       <Container className="flex flex-col items-start">
-        <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-emerald/30 bg-emerald/10 px-3.5 py-1.5 text-sm text-emerald-soft">
-          <span aria-hidden className="size-2 rounded-full bg-emerald pulse-dot" />
+        <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-sm text-accent">
+          <span aria-hidden className="size-2 rounded-full bg-status pulse-dot" />
           {profile.status}
         </p>
 
@@ -32,7 +32,7 @@ export function Hero() {
 
         <p className="rise rise-3 mt-7 max-w-3xl font-display text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.03em] text-ink text-balance sm:text-5xl lg:text-[3.6rem]">
           {profile.headline.lead}{" "}
-          <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.01em] text-gradient">
+          <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.01em] text-accent">
             {profile.headline.accent}
           </span>
         </p>
@@ -55,8 +55,8 @@ export function Hero() {
 
         <p className="rise rise-4 mt-12 hidden items-center gap-2 text-sm text-muted sm:flex">
           Press
-          <kbd className="rounded border border-line-2 bg-surface px-1.5 py-0.5 font-mono text-xs text-body">Cmd</kbd>
-          <kbd className="rounded border border-line-2 bg-surface px-1.5 py-0.5 font-mono text-xs text-body">K</kbd>
+          <kbd className="rounded border border-line bg-raised px-1.5 py-0.5 font-mono text-xs text-body">Cmd</kbd>
+          <kbd className="rounded border border-line bg-raised px-1.5 py-0.5 font-mono text-xs text-body">K</kbd>
           to get around
         </p>
       </Container>

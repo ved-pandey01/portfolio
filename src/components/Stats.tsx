@@ -18,10 +18,10 @@ export function Stats() {
                 {s.kind === "number" ? (
                   <CountUp from={s.from} to={s.to} prefix={s.prefix} suffix={s.suffix} />
                 ) : (
-                  <span className="text-gradient">{s.value}</span>
+                  <span className="text-accent">{s.value}</span>
                 )}
               </p>
-              {s.detail ? <p className="mt-2 font-mono text-xs text-emerald-soft">{s.detail}</p> : null}
+              {s.detail ? <p className="mt-2 font-mono text-xs text-accent">{s.detail}</p> : null}
             </li>
           ))}
         </ul>

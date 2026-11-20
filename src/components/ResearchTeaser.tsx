@@ -7,15 +7,15 @@ export function ResearchTeaser() {
   return (
     <section aria-labelledby="research-title" className="py-12 sm:py-16">
       <Container>
-        <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line-2 bg-gradient-to-br from-bg-2 via-surface to-bg-2 px-6 py-12 sm:px-12 sm:py-16">
+        <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line bg-gradient-to-br from-surface via-raised to-surface px-6 py-12 sm:px-12 sm:py-16">
           <div aria-hidden className="bg-grid absolute inset-0 -z-10 opacity-60" />
           <div
             aria-hidden
-            className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgb(16_185_129/0.18),transparent)]"
+            className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
           />
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex justify-center">
-              <Eyebrow tone="emerald">
+              <Eyebrow>
                 <span className="inline-flex items-center gap-2">
                   <Sparkles size={13} aria-hidden /> {researchTeaser.eyebrow}
                 </span>
@@ -37,13 +37,13 @@ export function ResearchTeaser() {
                   type="text"
                   disabled
                   placeholder={researchTeaser.inputPlaceholder}
-                  className="h-12 w-full cursor-not-allowed rounded-full border border-line-2 bg-bg/70 pl-11 pr-4 text-ink placeholder:text-muted"
+                  className="h-12 w-full cursor-not-allowed rounded-full border border-line bg-bg/70 pl-11 pr-4 text-ink placeholder:text-muted"
                 />
               </div>
               <button
                 type="submit"
                 disabled
-                className="shimmer h-12 cursor-not-allowed rounded-full border border-line-2 bg-surface px-6 text-sm font-medium text-body"
+                className="shimmer h-12 cursor-not-allowed rounded-full border border-line bg-raised px-6 text-sm font-medium text-body"
               >
                 {researchTeaser.button}
               </button>

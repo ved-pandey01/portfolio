@@ -26,7 +26,7 @@ export function Nav() {
         <Link href="/" className="group flex items-center gap-2.5 text-sm font-semibold text-ink">
           <span
             aria-hidden
-            className="grid size-7 place-items-center rounded-lg bg-gradient-to-br from-blue to-emerald font-display text-[13px] font-bold text-white shadow-[0_0_20px_-4px_rgb(59_130_246/0.7)]"
+            className="grid size-7 place-items-center rounded-lg bg-accent font-display text-[13px] font-bold text-bg shadow-[0_0_20px_-4px_var(--accent-glow)]"
           >
             V
           </span>
@@ -53,7 +53,7 @@ export function Nav() {
           <button
             type="button"
             onClick={() => window.dispatchEvent(new Event(OPEN_COMMAND_MENU))}
-            className="flex items-center gap-1.5 rounded-full border border-line-2 bg-surface/60 px-3 py-1.5 text-sm text-body transition-colors hover:border-blue-soft/60 hover:text-ink"
+            className="flex items-center gap-1.5 rounded-full border border-line bg-raised/60 px-3 py-1.5 text-sm text-body transition-colors hover:border-accent/60 hover:text-ink"
             aria-label="Open quick menu (Command K)"
           >
             <CommandIcon size={14} aria-hidden />

@@ -98,7 +98,7 @@ export function CommandMenu() {
         onOpenChange={setOpen}
         label="Quick menu"
         overlayClassName="fixed inset-0 z-[90] bg-bg/70 backdrop-blur-sm"
-        contentClassName="fixed left-1/2 top-[14vh] z-[91] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 overflow-hidden rounded-2xl border border-line-2 bg-surface/95 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.8),0_0_0_1px_rgb(59_130_246/0.15)] backdrop-blur-xl"
+        contentClassName="fixed left-1/2 top-[14vh] z-[91] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 overflow-hidden rounded-2xl border border-line bg-raised/95 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.8),0_0_0_1px_var(--accent-soft)] backdrop-blur-xl"
       >
         <div className="flex items-center gap-3 border-b border-line px-4">
           <FileText size={16} className="text-muted" aria-hidden />
@@ -106,7 +106,7 @@ export function CommandMenu() {
             placeholder="Jump to a section, open a link..."
             className="h-13 w-full bg-transparent py-4 text-[15px] text-ink placeholder:text-muted focus:outline-none"
           />
-          <kbd className="hidden rounded border border-line-2 px-1.5 py-0.5 font-mono text-[10px] text-muted sm:block">ESC</kbd>
+          <kbd className="hidden rounded border border-line px-1.5 py-0.5 font-mono text-[10px] text-muted sm:block">ESC</kbd>
         </div>
         <Command.List className="max-h-[60vh] overflow-y-auto p-2">
           <Command.Empty className="px-3 py-6 text-center text-sm text-muted">No results.</Command.Empty>
@@ -121,7 +121,7 @@ export function CommandMenu() {
                   key={`${heading}-${a.label}`}
                   value={`${heading} ${a.label}`}
                   onSelect={go(a.run)}
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-body data-[selected=true]:bg-blue/15 data-[selected=true]:text-ink"
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-body data-[selected=true]:bg-accent/15 data-[selected=true]:text-ink"
                 >
                   <span className="text-muted">{a.icon}</span>
                   <span className="flex-1">{a.label}</span>
@@ -134,7 +134,7 @@ export function CommandMenu() {
       </Command.Dialog>
       <div role="status" aria-live="polite" className="pointer-events-none fixed bottom-6 left-1/2 z-[95] -translate-x-1/2">
         {toast ? (
-          <span className="rounded-full border border-emerald/40 bg-surface px-4 py-2 text-sm text-ink shadow-lg">{toast}</span>
+          <span className="rounded-full border border-accent/40 bg-raised px-4 py-2 text-sm text-ink shadow-lg">{toast}</span>
         ) : null}
       </div>
     </>

@@ -21,7 +21,7 @@ export default function RecruitersPage() {
     <main id="main" className="relative isolate pb-24 pt-28 sm:pt-36">
       <div aria-hidden className="bg-grid absolute inset-x-0 top-0 -z-10 h-[32rem]" />
       <Container className="max-w-4xl">
-        <Eyebrow tone="emerald">For recruiters</Eyebrow>
+        <Eyebrow>For recruiters</Eyebrow>
         <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{profile.name}</h1>
         <p className="mt-3 text-lg text-muted">
           {profile.role} · {profile.location}
@@ -30,20 +30,20 @@ export default function RecruitersPage() {
           <ButtonLink href={profile.cv} download className="no-print">
             <Download size={16} aria-hidden /> Download CV
           </ButtonLink>
-          <p className="inline-flex items-center gap-2.5 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-sm text-emerald-soft">
-            <span aria-hidden className="size-2 rounded-full bg-emerald" />
+          <p className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm text-accent">
+            <span aria-hidden className="size-2 rounded-full bg-status" />
             {profile.status}
           </p>
         </div>
 
         <section aria-labelledby="summary-title" className="card mt-12 p-6 sm:p-8">
-          <h2 id="summary-title" className="font-mono text-xs uppercase tracking-widest text-blue-soft">
+          <h2 id="summary-title" className="font-mono text-xs uppercase tracking-widest text-accent">
             {recruiter.title}
           </h2>
           <ul className="mt-5 space-y-3 text-lg text-body">
             {recruiter.summary.map((line) => (
               <li key={line} className="flex gap-3">
-                <span aria-hidden className="mt-3 size-1.5 shrink-0 rounded-full bg-emerald" />
+                <span aria-hidden className="mt-3 size-1.5 shrink-0 rounded-full bg-accent" />
                 {line}
               </li>
             ))}
@@ -52,7 +52,7 @@ export default function RecruitersPage() {
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <section aria-labelledby="facts-title" className="card p-6 sm:p-8">
-            <h2 id="facts-title" className="font-mono text-xs uppercase tracking-widest text-blue-soft">
+            <h2 id="facts-title" className="font-mono text-xs uppercase tracking-widest text-accent">
               Key facts
             </h2>
             <dl className="mt-5 divide-y divide-line">
@@ -65,7 +65,7 @@ export default function RecruitersPage() {
             </dl>
           </section>
           <section aria-labelledby="proof-title" className="card p-6 sm:p-8">
-            <h2 id="proof-title" className="font-mono text-xs uppercase tracking-widest text-blue-soft">
+            <h2 id="proof-title" className="font-mono text-xs uppercase tracking-widest text-accent">
               Proof
             </h2>
             <ul className="mt-5 divide-y divide-line">
@@ -79,7 +79,7 @@ export default function RecruitersPage() {
         </div>
 
         <section aria-labelledby="reach-title" className="mt-12">
-          <h2 id="reach-title" className="mb-5 font-mono text-xs uppercase tracking-widest text-blue-soft">
+          <h2 id="reach-title" className="mb-5 font-mono text-xs uppercase tracking-widest text-accent">
             Contact
           </h2>
           <ContactLinks />

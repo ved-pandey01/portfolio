@@ -8,22 +8,22 @@ const ICONS: Record<string, SimpleIcon> = { siClaude, siGooglegemini, siHubspot,
 
 function Timeline() {
   return (
-    <ol className="relative ml-1.5 border-l border-line-2">
+    <ol className="relative ml-1.5 border-l border-line">
       {timeline.map((t, i) => (
         <Reveal as="li" key={t.title} delay={i * 0.08} className="relative pb-10 pl-8 last:pb-0">
           <span
             aria-hidden
             className={`absolute -left-[7px] top-1.5 size-3.5 rounded-full border-2 ${
               t.current
-                ? "border-emerald bg-emerald/30 shadow-[0_0_14px_2px_rgb(16_185_129/0.45)]"
-                : "border-blue-soft bg-bg"
+                ? "border-accent bg-accent/30 shadow-[0_0_14px_2px_var(--accent-glow)]"
+                : "border-muted bg-bg"
             }`}
           />
           {t.period ? <p className="font-mono text-xs text-muted">{t.period}</p> : null}
           <h3 className="font-display text-xl font-semibold text-ink">
             {t.title}
             {t.current ? (
-              <span className="ml-3 rounded-full bg-emerald/10 px-2 py-0.5 align-middle font-mono text-[11px] font-normal text-emerald-soft">
+              <span className="ml-3 rounded-full bg-accent/10 px-2 py-0.5 align-middle font-mono text-[11px] font-normal text-accent">
                 Now
               </span>
             ) : null}
@@ -47,7 +47,7 @@ function ToolkitWall() {
         return (
           <li
             key={t.name}
-            className="group flex h-28 flex-col items-center justify-center gap-3 bg-bg-2/95 transition-colors hover:bg-surface"
+            className="group flex h-28 flex-col items-center justify-center gap-3 bg-surface/95 transition-colors hover:bg-raised"
             style={icon ? ({ "--brand": `#${icon.hex}` } as React.CSSProperties) : undefined}
           >
             {icon ? (
@@ -63,7 +63,7 @@ function ToolkitWall() {
             ) : (
               <span
                 aria-hidden
-                className="grid size-7 place-items-center rounded-md border-2 border-muted font-display text-sm font-bold text-muted transition-colors group-hover:border-blue-soft group-hover:text-blue-soft"
+                className="grid size-7 place-items-center rounded-md border-2 border-muted font-display text-sm font-bold text-muted transition-colors group-hover:border-accent group-hover:text-accent"
               >
                 {t.name.charAt(0)}
               </span>

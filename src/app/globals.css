@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
 /* Design tokens. Palette matches the WhyNow app. */
-@theme {
-  --color-bg: #0b1120;
-  --color-bg-2: #0f1a2e;
-  --color-surface: #111827;
-  --color-line: #1f2937;
-  --color-line-2: #2a3a52;
-  --color-ink: #ffffff;
-  --color-body: #cbd5e1;
-  --color-muted: #94a3b8;
-  --color-blue: #3b82f6;
-  --color-blue-soft: #60a5fa;
-  --color-blue-deep: #2563eb;
-  --color-emerald: #10b981;
-  --color-emerald-soft: #34d399;
+@theme inline {
+  /* Values come from src/theme/palette.ts. Do not put colours here. */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-ink: var(--heading);
+  --color-body: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-status: var(--status);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display-face), var(--font-inter), ui-sans-serif, sans-serif;
@@ -41,20 +40,20 @@ html {
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-body);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgb(59 130 246 / 0.35);
-  color: #fff;
+  background: var(--accent-glow);
+  color: var(--heading);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-blue-soft);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -62,8 +61,8 @@ body {
 /* Subtle grid background with a fade mask. */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgb(148 163 184 / 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(148 163 184 / 0.07) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
 }
@@ -71,16 +70,9 @@ body {
 /* Card surface with a hairline gradient border. */
 .card {
   position: relative;
-  background: linear-gradient(180deg, rgb(17 24 39 / 0.85), rgb(15 26 46 / 0.6));
-  border: 1px solid var(--color-line);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 1rem;
-}
-
-.text-gradient {
-  background: linear-gradient(100deg, #60a5fa 0%, #34d399 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -117,7 +109,7 @@ body {
 @media print {
   .card, .bg-grid { background: none !important; border-color: #ccc !important; box-shadow: none !important; }
   .text-ink, .text-body, .text-muted { color: #111 !important; }
-  .text-blue-soft, .text-emerald-soft { color: #1d4ed8 !important; }
+  .text-accent { color: #111 !important; }
   main { padding-top: 0 !important; }
 }
 
@@ -125,11 +117,11 @@ body {
 .pulse-dot { position: relative; }
 .pulse-dot::after {
   content: ""; position: absolute; inset: 0; border-radius: 9999px;
-  background: var(--color-emerald); animation: ping-ring 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background: var(--status); animation: ping-ring 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 .shimmer { position: relative; overflow: hidden; }
 .shimmer::before {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgb(96 165 250 / 0.18) 50%, transparent 70%);
+  background: linear-gradient(110deg, transparent 30%, var(--accent-soft) 50%, transparent 70%);
   animation: sweep 3.2s linear infinite;
 }

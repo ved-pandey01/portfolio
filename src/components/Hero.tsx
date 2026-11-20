@@ -1,5 +1,5 @@
 import { ArrowDown, Download, Mail } from "lucide-react";
-import { profile } from "@/content/site";
+import { mailtoHref, profile } from "@/content/site";
 import { ButtonLink, Container } from "./ui";
 
 export function Hero() {
@@ -40,7 +40,7 @@ export function Hero() {
           <ButtonLink href={profile.cv} variant="secondary" download>
             <Download size={16} aria-hidden /> Download CV
           </ButtonLink>
-          <ButtonLink href="#contact" variant="secondary">
+          <ButtonLink href={mailtoHref} variant="secondary">
             <Mail size={16} aria-hidden /> Contact
           </ButtonLink>
         </div>

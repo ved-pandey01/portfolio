@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { profile } from "@/content/site";
+import { mailtoHref, profile } from "@/content/site";
 import { Container } from "./ui";
 
 export function Footer() {
@@ -9,12 +9,14 @@ export function Footer() {
         <p>
           {profile.name} · {profile.location}
         </p>
-        <p className="flex gap-5">
+        <p className="flex flex-wrap gap-x-5 gap-y-2">
+          <a href={mailtoHref} className="text-accent hover:text-accent-hover">
+            {profile.email}
+          </a>
           <Link href="/recruiters" className="hover:text-ink">
             Recruiter summary
           </Link>
-          <span>Built with Next.js</span>
-        </p>
+                  </p>
       </Container>
     </footer>
   );

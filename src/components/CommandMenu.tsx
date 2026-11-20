@@ -13,7 +13,7 @@ import {
   Sparkles,
   User,
 } from "lucide-react";
-import { caseStudies, nav, profile } from "@/content/site";
+import { caseStudies, mailtoHref, nav, profile } from "@/content/site";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export const OPEN_COMMAND_MENU = "open-command-menu";
@@ -69,18 +69,18 @@ export function CommandMenu() {
 
   const contact: Action[] = [
     { label: "Download CV", icon: <Download size={16} />, run: () => window.open(profile.cv, "_blank") },
+    { label: "Email Ved", hint: "Opens a new draft", icon: <Mail size={16} />, run: () => window.location.assign(mailtoHref) },
     {
-      label: "Copy email address",
+      label: "Copy email",
       hint: profile.email,
       icon: <Copy size={16} />,
       run: () => {
         navigator.clipboard?.writeText(profile.email).then(() => {
-          setToast("Email copied");
+          setToast("Copied");
           setTimeout(() => setToast(""), 2000);
         });
       },
     },
-    { label: "Send an email", icon: <Mail size={16} />, run: () => window.location.assign(`mailto:${profile.email}`) },
     { label: "LinkedIn", icon: <LinkedinIcon size={16} />, run: () => openUrl(profile.linkedin) },
     { label: "GitHub", icon: <GithubIcon size={16} />, run: () => openUrl(profile.github) },
   ];
@@ -104,7 +104,7 @@ export function CommandMenu() {
           <FileText size={16} className="text-muted" aria-hidden />
           <Command.Input
             placeholder="Jump to a section, open a link..."
-            className="h-13 w-full bg-transparent py-4 text-[15px] text-ink placeholder:text-muted focus:outline-none"
+            className="h-13 w-full bg-transparent py-4 text-[15px] text-ink placeholder:text-muted focus:outline-none focus-visible:outline-none"
           />
           <kbd className="hidden rounded border border-line px-1.5 py-0.5 font-mono text-[10px] text-muted sm:block">ESC</kbd>
         </div>

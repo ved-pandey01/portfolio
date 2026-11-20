@@ -1,5 +1,5 @@
 import { ArrowUpRight, Download, Mail } from "lucide-react";
-import { contact, profile } from "@/content/site";
+import { contact, mailtoHref, profile } from "@/content/site";
 import { CopyEmail } from "./CopyEmail";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { Reveal } from "./Reveal";
@@ -13,7 +13,7 @@ export function ContactLinks() {
     <ul className="flex flex-col gap-3">
       <li className={rowCls}>
         <Mail size={20} aria-hidden className="text-accent" />
-        <a href={`mailto:${profile.email}`} className="min-w-0 flex-1 truncate text-ink">
+        <a href={mailtoHref} className="min-w-0 flex-1 truncate text-ink hover:text-accent">
           <span className="block text-xs text-muted">Email</span>
           {profile.email}
         </a>

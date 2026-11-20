@@ -28,14 +28,18 @@ export const profile = {
     "Business development background, engineer’s habits. I build AI research agents and lead engines that give sales teams back their time.",
   status: "Open to SDR/BDR and GTM roles in the UK",
 
-  // PLACEHOLDER: the email address you want shown publicly.
-  email: "hello@example.com",
+  email: "vedpandey0108@gmail.com",
+  // Subject pre-filled on every email link.
+  emailSubject: "Hello Ved, saw your portfolio",
   linkedin: "https://www.linkedin.com/in/ved-prakash-pandey-954493202/",
   github: "https://github.com/ved-pandey01",
 
   // PLACEHOLDER: replace public/cv/Ved-Prakash-Pandey-CV.pdf with your real CV (keep the file name).
   cv: "/cv/Ved-Prakash-Pandey-CV.pdf",
 };
+
+// Every email link on the site: opens a new draft with the subject filled in.
+export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.emailSubject)}`;
 
 // PLACEHOLDER: your live domain once deployed (used for SEO, sitemap and social cards).
 export const siteUrl = "https://ved-pandey.vercel.app";

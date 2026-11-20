@@ -4,10 +4,7 @@ import type { DiagramStep } from "@/content/site";
 export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; label: string }) {
   return (
     <figure className="card overflow-hidden p-4 sm:p-6">
-      <figcaption className="mb-5 flex items-center justify-between font-mono text-xs uppercase tracking-widest text-muted">
-        <span>How it works</span>
-        <span className="hidden sm:inline">architecture</span>
-      </figcaption>
+      <figcaption className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">Architecture</figcaption>
       <ol aria-label={`${label} architecture`} className="flex flex-col items-stretch md:flex-row md:items-center">
         {steps.map((step, i) => (
           <li key={step.title} className="flex flex-col md:flex-1 md:flex-row md:items-center">

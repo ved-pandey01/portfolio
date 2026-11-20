@@ -1,8 +1,9 @@
-import { Search, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { researchTeaser } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Container, Eyebrow } from "./ui";
 import { Backdrop } from "./Backdrop";
+import { ResearchForm } from "./ResearchForm";
 
 export function ResearchTeaser() {
   return (
@@ -24,32 +25,19 @@ export function ResearchTeaser() {
             </h2>
             <p className="mt-4 text-lg text-muted">{researchTeaser.body}</p>
 
-            <form aria-describedby="research-note" className="mx-auto mt-8 flex max-w-lg flex-col gap-2 sm:flex-row">
-              <label htmlFor="research-input" className="sr-only">
-                Company name or website
-              </label>
-              <div className="relative flex-1">
-                <Search size={16} aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
-                <input
-                  id="research-input"
-                  type="text"
-                  disabled
-                  placeholder={researchTeaser.inputPlaceholder}
-                  className="h-12 w-full cursor-not-allowed rounded-full border border-line bg-bg/70 pl-11 pr-4 text-ink opacity-70 placeholder:text-muted"
-                />
-              </div>
-              <button
-                type="submit"
-                disabled
-                aria-disabled="true"
-                className="h-12 cursor-not-allowed rounded-full border border-dashed border-line bg-transparent px-6 text-sm font-medium text-muted opacity-60"
-              >
-                {researchTeaser.button}
-              </button>
-            </form>
-            <p id="research-note" className="mt-3 font-mono text-xs text-muted">
-              Powered by WhyNow. Not live yet.
+            <ResearchForm />
+            <p id="research-note" className="mt-4 text-sm text-muted">
+              {researchTeaser.note}
             </p>
+            <a
+              href={researchTeaser.sampleUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent-hover"
+            >
+              {researchTeaser.sampleLabel} <ArrowUpRight size={14} aria-hidden />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
         </Reveal>
       </Container>

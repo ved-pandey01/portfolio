@@ -201,12 +201,22 @@ export const caseStudies: CaseStudy[] = [
 // Research my company (teaser)
 // ---------------------------------------------------------------------------
 export const researchTeaser = {
-  eyebrow: "Coming soon",
+  eyebrow: "Free research",
   title: "Research my company",
   body: "Type your company and see how I’d prospect it.",
   inputPlaceholder: "yourcompany.co.uk",
   button: "Research",
+  note: "Free AI research report, sent by me personally.",
+  // Used while whynowUrl is null: Research opens an email draft with these.
+  emailSubject: "Research request: [company]",
+  emailBody: "Hi Ved,\n\nCould you research [company] for me?\n\nThanks,",
+  sampleLabel: "See a sample report (Paddle)",
+  sampleUrl: "https://github.com/ved-pandey01/whynow#sample-report",
 };
+
+// When WhyNow is live, set its URL here (e.g. "https://whynow.example.com"). Research then
+// opens WhyNow with ?company=<name> instead of drafting an email. WhyNow must read that parameter.
+export const whynowUrl: string | null = null;
 
 // ---------------------------------------------------------------------------
 // Now: what I'm building this month. Edit freely.

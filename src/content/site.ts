@@ -18,6 +18,8 @@ export const profile = {
   location: "Bedford, UK",
   role: "Business Development, moving into GTM Engineering",
   positioning: "The SDR who builds his own tools.",
+  // Line under the name in the hero.
+  subline: "Business Development \u2192 GTM Engineering \u00b7 Bedford, UK",
   headline: {
     lead: "I don’t just sell.",
     accent: "I build the systems that sell.",

@@ -24,15 +24,20 @@ export function Hero() {
 
         <h1
           id="hero-title"
-          className="rise rise-2 mt-8 max-w-4xl font-display text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] text-ink text-balance sm:text-7xl lg:text-[5.5rem]"
+          className="rise rise-2 mt-7 font-display text-[2.75rem] font-semibold leading-[1] tracking-[-0.04em] text-ink sm:text-7xl lg:text-[5.25rem]"
         >
+          {profile.name}
+        </h1>
+        <p className="rise rise-2 mt-4 font-mono text-sm text-muted sm:text-base">{profile.subline}</p>
+
+        <p className="rise rise-3 mt-7 max-w-3xl font-display text-[1.85rem] font-semibold leading-[1.08] tracking-[-0.03em] text-ink text-balance sm:text-5xl lg:text-[3.6rem]">
           {profile.headline.lead}{" "}
           <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.01em] text-gradient">
             {profile.headline.accent}
           </span>
-        </h1>
+        </p>
 
-        <p className="rise rise-3 mt-7 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
+        <p className="rise rise-3 mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
           <span className="text-body">{profile.positioning}</span> {profile.intro}
         </p>
 

@@ -30,7 +30,7 @@ function Timeline() {
           </h3>
           <p className="mt-1 text-body">
             {t.org}
-            {t.place ? <span className="text-muted"> · {t.place}</span> : null}
+            {t.place ? <span className="text-muted">{t.org ? " · " : ""}{t.place}</span> : null}
           </p>
           {t.detail ? <p className="mt-2 text-muted">{t.detail}</p> : null}
         </Reveal>
@@ -42,12 +42,17 @@ function Timeline() {
 function ToolkitWall() {
   return (
     <ul aria-label="Toolkit" className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
-      {toolkit.map((t) => {
+      {toolkit.map((t, i) => {
+        // An odd last tile spans the row so the wall stays a clean rectangle.
+        const last = i === toolkit.length - 1;
+        const span = last
+          ? `${toolkit.length % 2 === 1 ? "col-span-2" : ""} ${toolkit.length % 3 === 1 ? "sm:col-span-3" : "sm:col-span-1"}`
+          : "";
         const icon = t.icon ? ICONS[t.icon] : undefined;
         return (
           <li
             key={t.name}
-            className="group flex h-28 flex-col items-center justify-center gap-3 bg-surface/95 transition-colors hover:bg-raised"
+            className={`group flex h-28 flex-col items-center justify-center gap-3 bg-surface/95 transition-colors hover:bg-raised ${span}`}
             style={icon ? ({ "--brand": `#${icon.hex}` } as React.CSSProperties) : undefined}
           >
             {icon ? (

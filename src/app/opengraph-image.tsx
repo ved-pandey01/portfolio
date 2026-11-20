@@ -39,20 +39,16 @@ export default function OgImage() {
           >
             V
           </div>
-          <div style={{ fontSize: 28, color: palette.heading }}>{profile.name}</div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ fontSize: 72, fontWeight: 700, color: palette.heading, letterSpacing: -2, lineHeight: 1.05 }}>
-            {profile.headline.lead}
+        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <div style={{ fontSize: 96, fontWeight: 700, color: palette.heading, letterSpacing: -3, lineHeight: 1 }}>
+            {profile.name}
           </div>
-          <div style={{ fontSize: 72, fontWeight: 700, color: palette.accent, fontStyle: "italic", letterSpacing: -2, lineHeight: 1.05 }}>
-            {profile.headline.accent}
+          <div style={{ fontSize: 56, color: palette.accent, fontStyle: "italic", letterSpacing: -1, lineHeight: 1.1 }}>
+            {profile.positioning}
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: 26 }}>
-          <div style={{ color: palette.muted }}>{profile.positioning}</div>
-          <div style={{ color: palette.muted }}>{profile.location}</div>
-        </div>
+        <div style={{ display: "flex" }} />
       </div>
     ),
     size,

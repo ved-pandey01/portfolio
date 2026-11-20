@@ -16,16 +16,16 @@ export const profile = {
   name: "Ved Prakash Pandey",
   shortName: "Ved",
   location: "Bedford, UK",
-  role: "Business Development, moving into GTM Engineering",
-  positioning: "The SDR who builds his own tools.",
+  // Tagline: tab title and social image.
+  positioning: "The builder behind the pipeline.",
   // Line under the name in the hero.
-  subline: "Business Development \u2192 GTM Engineering \u00b7 Bedford, UK",
+  subline: "Business Development \u00b7 AI Automation \u00b7 Bedford, UK",
   headline: {
-    lead: "I don’t just sell.",
-    accent: "I build the systems that sell.",
+    lead: "Business thinking.",
+    accent: "Builder\u2019s hands.",
   },
-  // Key line: hero intro, /recruiters subtitle and social-sharing description.
-  keyLine: "A business developer who builds his own sales systems.",
+  // Key line: hero intro, /recruiters subtitle, and meta/social descriptions.
+  keyLine: "I build AI tools that help businesses grow.",
   status: "Open to SDR/BDR and GTM roles in the UK",
 
   email: "vedpandey0108@gmail.com",
@@ -45,14 +45,13 @@ export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(
 export const siteUrl = "https://portfolio-two-lemon-kp20ftvw2b.vercel.app";
 
 export const seo = {
-  title: "Ved Prakash Pandey | The SDR who builds his own tools",
+  title: "Ved Prakash Pandey | The builder behind the pipeline",
   // Google search description.
-  description: "A business developer who builds his own sales systems.",
+  description: "I build AI tools that help businesses grow.",
   // Social-sharing (Open Graph and X) description for the home page.
-  shareDescription: "A business developer who builds his own sales systems.",
+  shareDescription: "I build AI tools that help businesses grow.",
   recruitersTitle: "Recruiter summary | Ved Prakash Pandey",
-  recruitersDescription:
-    "A 30-second summary of Ved Prakash Pandey: key facts, CV and contact details.",
+  recruitersDescription: "I build AI tools that help businesses grow.",
 };
 
 // ---------------------------------------------------------------------------
@@ -187,11 +186,11 @@ export const now = {
 // About
 // ---------------------------------------------------------------------------
 export const about = {
-  title: "From selling to building",
-  body: "Business development taught me where sales time goes. Now I build the tools that win it back.",
+  title: "Commercial instinct, technical craft.",
+  body: "Business development taught me where time goes. Now I build the tools that win it back.",
 };
 
-export type TimelineItem = { period?: string; title: string; org: string; place?: string; detail?: string; current?: boolean };
+export type TimelineItem = { period?: string; title: string; org?: string; place?: string; detail?: string; current?: boolean };
 
 export const timeline: TimelineItem[] = [
   {
@@ -208,8 +207,7 @@ export const timeline: TimelineItem[] = [
   },
   {
     period: "2026 to present",
-    title: "GTM Engineering",
-    org: "Building AI-powered sales systems",
+    title: "Building AI and automation tools",
     place: "Bedford, UK",
     current: true,
   },
@@ -221,6 +219,7 @@ export const toolkit: { name: string; icon?: string }[] = [
   { name: "n8n", icon: "siN8n" },
   { name: "HubSpot", icon: "siHubspot" },
   { name: "Python", icon: "siPython" },
+  { name: "SQL" },
   { name: "Claude Code", icon: "siClaude" },
   { name: "Gemini", icon: "siGooglegemini" },
 ];
@@ -231,16 +230,16 @@ export const toolkit: { name: string; icon?: string }[] = [
 export const recruiter = {
   title: "The 30-second version",
   summary: [
-    "I\u2019ve sold, so I know where sales time is lost: research, lead triage and follow-ups.",
-    "Now I build the systems that fix it, with AI research agents and automated lead engines.",
+    "Commercial instinct meets technical craft. I design automations that research, qualify and follow up at scale.",
+    "Built an AI account research agent (WhyNow) and an automated inbound lead engine.",
     "Proven in business development: client satisfaction from 72% to 89%, engagement up 200%, promoted within six months, and a Roche Diabetic Care partnership.",
-    "Ready for SDR/BDR roles today, and growing into GTM Engineering.",
+    "Ready to start in an SDR/BDR or GTM role today.",
   ],
   whyHireTitle: "Why hire me",
   whyHire: [
     { title: "I know the job I\u2019m automating.", body: "Business development taught me what reps actually need." },
     { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools. Code for the Lead Engine is on GitHub." },
-    { title: "I speak sales and systems.", body: "I talk pipeline with sales leaders and workflows, data and CRM with ops." },
+    { title: "I speak business and systems.", body: "I talk pipeline with revenue leaders and workflows, data and CRM with ops." },
   ],
   capabilitiesTitle: "What I can do for your team",
   capabilities: [
@@ -257,7 +256,7 @@ export const recruiter = {
     { label: "Education", value: "MSc International Business, Anglia Ruskin" },
     { label: "MSc result", value: "100/100 in Finance module" },
     { label: "Certification", value: "HubSpot Sales Hub Software" },
-    { label: "Toolkit", value: "Clay, n8n, HubSpot, Python, Claude Code, Gemini" },
+    { label: "Toolkit", value: "Clay, n8n, HubSpot, Python, SQL, Claude Code, Gemini" },
     { label: "Right to work", value: "Graduate visa, full right to work in the UK until November 2028. No sponsorship needed." },
     { label: "Availability", value: "Immediately" },
   ],

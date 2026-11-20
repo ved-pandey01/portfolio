@@ -99,8 +99,8 @@ export function Work() {
           <SectionHeading
             id="work-title"
             eyebrow="Featured work"
-            title="Tools I built to sell smarter."
-            body="Real systems, built end to end. Each one starts with a real sales problem."
+            title="AI tools, built end to end."
+            body="Real, working systems. Each one solves a real business problem."
           />
         </Reveal>
         <div className="mt-10 flex flex-col gap-16">

@@ -174,7 +174,6 @@ export const now = {
     // PLACEHOLDER: replace with what you are actually working on.
     { title: "Shipping WhyNow Stage 1", detail: "Hosting the app and adding a public demo." },
     { title: "This portfolio", detail: "Built in Next.js with Claude Code." },
-    { title: "Next build", detail: "PLACEHOLDER: your next project." },
   ],
 };
 

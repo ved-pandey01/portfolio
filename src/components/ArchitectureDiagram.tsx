@@ -8,7 +8,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
       <ol aria-label={`${label} architecture`} className="flex flex-col items-stretch md:flex-row md:items-stretch">
         {steps.map((step, i) => (
           <li key={step.title} className="flex flex-col md:flex-1 md:flex-row md:items-stretch">
-            <div className="depth flex-1 rounded-xl border border-line p-3.5">
+            <div className="depth arch-box flex-1 rounded-xl border border-line p-3.5">
               <p className="font-mono text-[11px] uppercase tracking-widest text-accent">
                 {String(i + 1).padStart(2, "0")} {step.title}
               </p>
@@ -31,7 +31,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
               <div aria-hidden className="connector relative mx-auto h-7 w-px shrink-0 md:mx-2 md:h-px md:w-8 md:self-center">
                 <span
                   className="flow-dot absolute size-1.5 rounded-full"
-                  style={{ animationDelay: `${i * 1.6}s` }}
+                  style={{ animationDelay: `${i * 0.8}s` }}
                 />
               </div>
             ) : null}

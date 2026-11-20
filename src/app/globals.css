@@ -123,60 +123,65 @@ body {
   border-bottom-color: var(--frame-border);
 }
 
-/* Architecture diagram connectors: brighter champagne line, and a light pulse
-   (glowing dot with a short tail) that travels box 01 > 02 > 03 > 04 in turn.
-   Each hop takes 1.6s; the cycle is 3 hops (4.8s), and each connector is
-   delayed by 1.6s x its index (set inline), so only one is lit at a time.
-   If a diagram ever has a different number of steps, change 4.8s and 33.33%. */
-.connector { background: var(--connector); }
+/* Architecture boxes: own gradient and rim light; lift 2px with a champagne
+   border on hover (transform only, so the layout never moves). */
+.arch-box {
+  background: linear-gradient(180deg, var(--arch-box-top), var(--arch-box-bottom));
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.arch-box:hover {
+  transform: translateY(-2px);
+}
+
+/* Architecture connectors: champagne line at 35%, an always-visible glowing dot
+   at each end, and a bright pulse on every connector at once, staggered 0.8s
+   (delay set inline), 2.4s per loop. */
+.connector {
+  background: var(--connector);
+}
+.connector::before,
+.connector::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--connector-dot);
+  box-shadow: 0 0 10px 2px var(--connector-glow);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.connector::before { top: 0; }
+.connector::after { top: 100%; }
 .flow-dot {
   left: 50%;
   top: 0;
-  background: var(--accent-hover);
-  box-shadow: 0 0 6px 2px var(--flow-glow), 0 0 14px 4px color-mix(in srgb, var(--flow-glow) 45%, transparent);
-  animation: flow-y 4.8s cubic-bezier(0.45, 0, 0.55, 1) infinite both;
+  background: var(--pulse);
+  box-shadow: 0 0 10px 3px var(--connector-glow), 0 0 4px 1px var(--pulse);
+  animation: flow-y 2.4s ease-in-out infinite both;
   will-change: transform, opacity;
 }
-.flow-dot::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  width: 1px;
-  height: 14px;
-  transform: translateX(-50%);
-  background: linear-gradient(to bottom, transparent, var(--accent-hover));
-}
 @keyframes flow-y {
-  0% { transform: translate(-50%, -4px); opacity: 0; }
-  4%, 29% { opacity: 1; }
-  33.33%, 100% { transform: translate(-50%, 28px); opacity: 0; }
+  0% { transform: translate(-50%, -3px); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translate(-50%, 25px); opacity: 0; }
 }
 @keyframes flow-x {
-  0% { transform: translate(-4px, -50%); opacity: 0; }
-  4%, 29% { opacity: 1; }
-  33.33%, 100% { transform: translate(32px, -50%); opacity: 0; }
+  0% { transform: translate(-3px, -50%); opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100% { transform: translate(29px, -50%); opacity: 0; }
 }
 @media (min-width: 768px) {
+  .connector::before,
+  .connector::after { top: 50%; }
+  .connector::before { left: 0; }
+  .connector::after { left: 100%; }
   .flow-dot { left: 0; top: 50%; animation-name: flow-x; }
-  .flow-dot::before {
-    left: auto;
-    right: 100%;
-    bottom: auto;
-    top: 50%;
-    width: 14px;
-    height: 1px;
-    transform: translateY(-50%);
-    background: linear-gradient(to right, transparent, var(--accent-hover));
-  }
 }
-/* Reduced motion: no travelling pulse; each connector shows one still, glowing dot at its midpoint. */
+/* Reduced motion: no pulse and no lift; the end dots stay visible. */
 @media (prefers-reduced-motion: reduce) {
-  .flow-dot { animation: none !important; opacity: 1; transform: translate(-50%, 11px); }
-  .flow-dot::before { display: none; }
-}
-@media (prefers-reduced-motion: reduce) and (min-width: 768px) {
-  .flow-dot { transform: translate(13px, -50%); }
+  .flow-dot { display: none; }
+  .arch-box:hover { transform: none; }
 }
 
 @media print {

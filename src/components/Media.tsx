@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { ImageIcon, PlayCircle } from "lucide-react";
 import type { CaseStudy } from "@/content/site";
+import { ZoomableImage } from "./ZoomableImage";
 
 function Frame({ children, title }: { children: React.ReactNode; title: string }) {
   return (
@@ -37,13 +37,12 @@ export function Screenshot({ study }: { study: CaseStudy }) {
   return (
     <Frame title={study.name}>
       {study.screenshot ? (
-        <Image
+        <ZoomableImage
           src={study.screenshot.src}
           alt={study.screenshot.alt}
           width={study.screenshot.width}
           height={study.screenshot.height}
           sizes="(min-width: 1024px) 560px, 100vw"
-          className="h-auto w-full"
         />
       ) : (
         <ComingSoon icon={<ImageIcon size={28} aria-hidden />} text="Screenshot coming soon" />

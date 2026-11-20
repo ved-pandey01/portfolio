@@ -42,7 +42,7 @@ export const profile = {
 export const mailtoHref = `mailto:${profile.email}?subject=${encodeURIComponent(profile.emailSubject)}`;
 
 // Live domain (used for SEO, sitemap and social cards). Update if you add a custom domain.
-export const siteUrl = "https://portfolio-two-lemon-kp20ftvw2b.vercel.app";
+export const siteUrl = "https://vedpandey.vercel.app";
 
 export const seo = {
   title: "Ved Prakash Pandey | The builder behind the pipeline",

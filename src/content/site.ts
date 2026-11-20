@@ -175,11 +175,11 @@ export const researchTeaser = {
 // Now: what I'm building this month. Edit freely.
 // ---------------------------------------------------------------------------
 export const now = {
-  updated: "November 2026", // PLACEHOLDER: update when you edit the list.
+  updated: "November 2026", // Update when you edit the list.
   items: [
-    // PLACEHOLDER: replace with what you are actually working on.
     { title: "Shipping WhyNow Stage 1", detail: "Hosting the app and adding a public demo." },
     { title: "This portfolio", detail: "Built in Next.js with Claude Code." },
+    { title: "Sharpening my GTM stack", detail: "Hands-on practice with Clay, n8n and HubSpot." },
   ],
 };
 
@@ -195,20 +195,19 @@ export type TimelineItem = { period?: string; title: string; org: string; place?
 
 export const timeline: TimelineItem[] = [
   {
-    // PLACEHOLDER: replace YYYY with real years on each item below.
-    period: "YYYY to YYYY",
+    period: "Feb 2023 to Nov 2024",
     title: "Business Development",
     org: "Rose Pharmaco and Omgreek Services",
     place: "India",
   },
   {
-    period: "YYYY to YYYY",
+    period: "2025 to May 2026",
     title: "MSc International Business",
     org: "Anglia Ruskin University",
     place: "UK",
   },
   {
-    period: "YYYY to present",
+    period: "2026 to present",
     title: "GTM Engineering",
     org: "Building AI-powered sales systems",
     place: "Bedford, UK",
@@ -259,10 +258,8 @@ export const recruiter = {
     { label: "MSc result", value: "100/100 in Finance module" },
     { label: "Certification", value: "HubSpot Sales Hub Software" },
     { label: "Toolkit", value: "Clay, n8n, HubSpot, Python, Claude Code, Gemini" },
-    // PLACEHOLDER: confirm your right to work status, or delete this line.
-    { label: "Right to work", value: "PLACEHOLDER" },
-    // PLACEHOLDER: notice period / availability, or delete this line.
-    { label: "Availability", value: "PLACEHOLDER" },
+    { label: "Right to work", value: "Graduate visa, full right to work in the UK until November 2028. No sponsorship needed." },
+    { label: "Availability", value: "Immediately" },
   ],
 };
 

@@ -115,8 +115,7 @@ export const caseStudies: CaseStudy[] = [
     links: [
       // PLACEHOLDER: live demo URL.
       { label: "Live demo", href: "#", placeholder: true },
-      // PLACEHOLDER: WhyNow GitHub URL.
-      { label: "GitHub", href: "#", placeholder: true },
+      { label: "GitHub", href: "https://github.com/ved-pandey01/whynow" },
     ],
     screenshot: {
       src: "/work/whynow-landing.png",
@@ -238,7 +237,7 @@ export const recruiter = {
   whyHireTitle: "Why hire me",
   whyHire: [
     { title: "I know the job I\u2019m automating.", body: "Business development taught me what reps actually need." },
-    { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools. Code for the Lead Engine is on GitHub." },
+    { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools on GitHub." },
     { title: "I speak business and systems.", body: "I talk pipeline with revenue leaders and workflows, data and CRM with ops." },
   ],
   capabilitiesTitle: "What I can do for your team",

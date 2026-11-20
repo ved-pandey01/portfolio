@@ -23,7 +23,7 @@ function ComingSoon({ icon, text }: { icon: React.ReactNode; text: string }) {
     <div
       role="img"
       aria-label={text}
-      className="grid aspect-video place-items-center bg-[repeating-linear-gradient(135deg,transparent_0_12px,var(--grid-line)_12px_13px)]"
+      className="grid aspect-video place-items-center bg-[repeating-linear-gradient(135deg,transparent_0_12px,var(--accent-soft)_12px_13px)]"
     >
       <div className="flex flex-col items-center gap-2 text-muted">
         {icon}

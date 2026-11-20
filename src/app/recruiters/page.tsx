@@ -19,7 +19,7 @@ function statText(s: (typeof stats)[number]) {
 export default function RecruitersPage() {
   return (
     <main id="main" className="relative isolate pb-16 pt-24 sm:pt-28">
-      <div aria-hidden className="bg-grid absolute inset-x-0 top-0 -z-10 h-[32rem]" />
+      <div aria-hidden className="bg-dots absolute inset-x-0 top-0 -z-10 h-[32rem]" />
       <Container className="max-w-4xl">
         <Eyebrow>For recruiters</Eyebrow>
         <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{profile.name}</h1>

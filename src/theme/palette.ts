@@ -7,29 +7,34 @@
  * text-muted, text-accent and bg-button (see src/app/globals.css).
  *
  * Use the accent sparingly: italic headline words, outline buttons, links and
- * small labels only. No gradients, no coloured glows.
+ * small labels only. Background effects (glows, dots, grain) are tuned in `alpha`.
  */
 export const palette = {
-  bg: "#0E0D0B", // page background
-  surface: "#161512", // cards
-  raised: "#1D1B18", // raised surfaces: inputs, chips, hover states
-  line: "#2A2722", // borders and dividers
+  bg: "#14120F", // page background (warm espresso)
+  surface: "#1B1915", // cards
+  raised: "#23201B", // raised surfaces: inputs, chips, hover states
+  line: "#302C25", // borders and dividers
   text: "#EDE8DF", // body text
-  muted: "#8A8276", // secondary text
+  muted: "#948C7F", // secondary text (#8A8276 nudged lighter to pass WCAG AA on raised surfaces)
   heading: "#F5F1EA", // headings
   accent: "#C9B38A", // champagne accent
   accentHover: "#D8C7A3", // champagne on hover
   button: "#EDE8DF", // main button fill
-  buttonText: "#0E0D0B", // main button text
+  buttonText: "#14120F", // main button text
   buttonHover: "#F5F1EA", // main button fill on hover
   status: "#22C55E", // the "open to roles" status dot only
 };
 
 // Translucent tints derived from the colours above (0 to 1).
 const alpha = {
-  accentSoft: 0.06, // pill and badge fills (max 6%)
+  accentSoft: 0.06, // pill and badge fills
   selection: 0.3, // text selection highlight
-  gridLine: 0.045, // background grid lines, barely visible
+  heroGlow: 0.1, // large hero glow, top right
+  heroGlowFaint: 0.05, // smaller hero glow, bottom left
+  dots: 0.13, // champagne dot pattern
+  hairline: 0.55, // thin line along the top of the hero (at its brightest point)
+  cardGlow: 0.22, // stat card border glow on hover
+  grain: 0.03, // film-grain noise over the whole page
 };
 
 function rgba(hex: string, a: number) {
@@ -53,5 +58,10 @@ export const cssVariables = {
   "--status": palette.status,
   "--accent-soft": rgba(palette.accent, alpha.accentSoft),
   "--selection": rgba(palette.accent, alpha.selection),
-  "--grid-line": rgba(palette.muted, alpha.gridLine),
+  "--hero-glow": rgba(palette.accent, alpha.heroGlow),
+  "--hero-glow-faint": rgba(palette.accent, alpha.heroGlowFaint),
+  "--dots": rgba(palette.accent, alpha.dots),
+  "--hairline": rgba(palette.accent, alpha.hairline),
+  "--card-glow": rgba(palette.accent, alpha.cardGlow),
+  "--grain-opacity": String(alpha.grain),
 } as React.CSSProperties;

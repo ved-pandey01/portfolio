@@ -5,8 +5,11 @@ import { ButtonLink, Container } from "./ui";
 export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pb-10 pt-24 sm:pb-14 sm:pt-28">
-      {/* Background: grid and soft glows */}
-      <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
+      {/* Background: dot pattern, drifting champagne glows, hairline. All CSS. */}
+      <div aria-hidden className="bg-dots absolute inset-0 -z-10" />
+      <div aria-hidden className="glow glow-main -z-10" />
+      <div aria-hidden className="glow glow-faint -z-10" />
+      <div aria-hidden className="hairline absolute inset-x-0 top-0 h-px" />
 
       <Container className="flex flex-col items-start">
         <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 text-sm text-accent">

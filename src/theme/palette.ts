@@ -35,6 +35,10 @@ const alpha = {
   hairline: 0.55, // thin line along the top of the hero (at its brightest point)
   cardGlow: 0.22, // stat card border glow on hover
   grain: 0.03, // film-grain noise over the whole page
+  connector: 0.5, // architecture diagram connector lines
+  flowGlow: 0.6, // soft glow around the travelling connector dot
+  rim: 0.07, // rim light along the top edge of raised cards (from `heading`)
+  depthShadow: 0.6, // soft drop shadow under raised cards (black)
 };
 
 function rgba(hex: string, a: number) {
@@ -64,4 +68,8 @@ export const cssVariables = {
   "--hairline": rgba(palette.accent, alpha.hairline),
   "--card-glow": rgba(palette.accent, alpha.cardGlow),
   "--grain-opacity": String(alpha.grain),
+  "--connector": rgba(palette.accentHover, alpha.connector),
+  "--flow-glow": rgba(palette.accentHover, alpha.flowGlow),
+  "--rim": rgba(palette.heading, alpha.rim),
+  "--depth-shadow": rgba("#000000", alpha.depthShadow),
 } as React.CSSProperties;

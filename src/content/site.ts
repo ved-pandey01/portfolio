@@ -46,8 +46,8 @@ export const siteUrl = "https://ved-pandey.vercel.app";
 
 export const seo = {
   title: "Ved Prakash Pandey | The SDR who builds his own tools",
-  description:
-    "Business Development professional moving into GTM Engineering. I build AI account research agents and inbound lead engines. Based in Bedford, UK.",
+  // Google search description.
+  description: "A business developer who builds his own sales systems.",
   // Social-sharing (Open Graph and X) description for the home page.
   shareDescription: "A business developer who builds his own sales systems.",
   recruitersTitle: "Recruiter summary | Ved Prakash Pandey",
@@ -240,7 +240,7 @@ export const recruiter = {
   whyHireTitle: "Why hire me",
   whyHire: [
     { title: "I know the job I\u2019m automating.", body: "Business development taught me what reps actually need." },
-    { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools on GitHub." },
+    { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools. Code for the Lead Engine is on GitHub." },
     { title: "I speak sales and systems.", body: "I talk pipeline with sales leaders and workflows, data and CRM with ops." },
   ],
   capabilitiesTitle: "What I can do for your team",

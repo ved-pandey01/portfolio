@@ -28,11 +28,11 @@ export default function OgImage() {
               width: 48,
               height: 48,
               borderRadius: 12,
-              background: palette.accent,
+              border: `2px solid ${palette.accent}`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: palette.bg,
+              color: palette.accent,
               fontSize: 26,
               fontWeight: 700,
             }}
@@ -50,8 +50,8 @@ export default function OgImage() {
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 26 }}>
-          <div style={{ color: palette.accent }}>{profile.positioning}</div>
-          <div>{profile.location}</div>
+          <div style={{ color: palette.muted }}>{profile.positioning}</div>
+          <div style={{ color: palette.muted }}>{profile.location}</div>
         </div>
       </div>
     ),

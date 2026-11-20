@@ -98,7 +98,7 @@ export function CommandMenu() {
         onOpenChange={setOpen}
         label="Quick menu"
         overlayClassName="fixed inset-0 z-[90] bg-bg/70 backdrop-blur-sm"
-        contentClassName="fixed left-1/2 top-[14vh] z-[91] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 overflow-hidden rounded-2xl border border-line bg-raised/95 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.8),0_0_0_1px_var(--accent-soft)] backdrop-blur-xl"
+        contentClassName="fixed left-1/2 top-[14vh] z-[91] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 overflow-hidden rounded-2xl border border-line bg-raised/95 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.8)] backdrop-blur-xl"
       >
         <div className="flex items-center gap-3 border-b border-line px-4">
           <FileText size={16} className="text-muted" aria-hidden />
@@ -121,7 +121,7 @@ export function CommandMenu() {
                   key={`${heading}-${a.label}`}
                   value={`${heading} ${a.label}`}
                   onSelect={go(a.run)}
-                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-body data-[selected=true]:bg-accent/15 data-[selected=true]:text-ink"
+                  className="flex cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-body data-[selected=true]:bg-raised data-[selected=true]:text-ink"
                 >
                   <span className="text-muted">{a.icon}</span>
                   <span className="flex-1">{a.label}</span>

@@ -51,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen overflow-x-hidden">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-bg"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-button focus:px-4 focus:py-2 focus:text-button-text"
         >
           Skip to content
         </a>

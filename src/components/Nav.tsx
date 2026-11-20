@@ -26,7 +26,7 @@ export function Nav() {
         <Link href="/" className="group flex items-center gap-2.5 text-sm font-semibold text-ink">
           <span
             aria-hidden
-            className="grid size-7 place-items-center rounded-lg bg-accent font-display text-[13px] font-bold text-bg shadow-[0_0_20px_-4px_var(--accent-glow)]"
+            className="grid size-7 place-items-center rounded-lg border border-accent/70 font-display text-[13px] font-semibold text-accent"
           >
             V
           </span>

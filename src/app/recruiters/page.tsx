@@ -30,7 +30,7 @@ export default function RecruitersPage() {
           <ButtonLink href={profile.cv} download className="no-print">
             <Download size={16} aria-hidden /> Download CV
           </ButtonLink>
-          <p className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm text-accent">
+          <p className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-soft px-4 py-2 text-sm text-accent">
             <span aria-hidden className="size-2 rounded-full bg-status" />
             {profile.status}
           </p>

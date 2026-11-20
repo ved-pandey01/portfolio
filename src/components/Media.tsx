@@ -4,7 +4,7 @@ import { ZoomableImage } from "./ZoomableImage";
 
 function Frame({ children, title }: { children: React.ReactNode; title: string }) {
   return (
-    <div className="card overflow-hidden p-0 shadow-[0_30px_80px_-30px_var(--accent-soft)]">
+    <div className="card overflow-hidden p-0">
       <div className="flex items-center gap-2 border-b border-line px-4 py-2.5">
         <span aria-hidden className="flex gap-1.5">
           <span className="size-2.5 rounded-full bg-line" />

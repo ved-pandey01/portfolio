@@ -15,7 +15,7 @@ function Timeline() {
             aria-hidden
             className={`absolute -left-[7px] top-1.5 size-3.5 rounded-full border-2 ${
               t.current
-                ? "border-accent bg-accent/30 shadow-[0_0_14px_2px_var(--accent-glow)]"
+                ? "border-accent bg-bg"
                 : "border-muted bg-bg"
             }`}
           />
@@ -23,7 +23,7 @@ function Timeline() {
           <h3 className="font-display text-xl font-semibold text-ink">
             {t.title}
             {t.current ? (
-              <span className="ml-3 rounded-full bg-accent/10 px-2 py-0.5 align-middle font-mono text-[11px] font-normal text-accent">
+              <span className="ml-3 rounded-full bg-accent-soft px-2 py-0.5 align-middle font-mono text-[11px] font-normal text-accent">
                 Now
               </span>
             ) : null}

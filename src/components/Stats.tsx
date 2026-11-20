@@ -18,7 +18,7 @@ export function Stats() {
                 {s.kind === "number" ? (
                   <CountUp from={s.from} to={s.to} prefix={s.prefix} suffix={s.suffix} />
                 ) : (
-                  <span className="text-accent">{s.value}</span>
+                  <span>{s.value}</span>
                 )}
               </p>
               {s.detail ? <p className="mt-2 font-mono text-xs text-accent">{s.detail}</p> : null}

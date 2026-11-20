@@ -18,7 +18,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
                     key={item}
                     className={`rounded-md px-2 py-1 text-[13px] ${
                       i === steps.length - 1
-                        ? "bg-accent/10 text-accent ring-1 ring-accent/25"
+                        ? "bg-accent-soft text-accent ring-1 ring-accent/25"
                         : "bg-raised text-ink ring-1 ring-line"
                     }`}
                   >
@@ -30,7 +30,7 @@ export function ArchitectureDiagram({ steps, label }: { steps: DiagramStep[]; la
             {i < steps.length - 1 ? (
               <div aria-hidden className="relative mx-auto h-7 w-px shrink-0 bg-line md:mx-2 md:h-px md:w-8 md:self-center">
                 <span
-                  className="flow-dot absolute size-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_var(--accent-glow)]"
+                  className="flow-dot absolute size-1.5 rounded-full bg-accent"
                   style={{ animationDelay: `${i * 0.4}s` }}
                 />
               </div>

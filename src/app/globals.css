@@ -13,6 +13,9 @@
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-soft: var(--accent-soft);
+  --color-button: var(--button);
+  --color-button-text: var(--button-text);
+  --color-button-hover: var(--button-hover);
   --color-status: var(--status);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -44,7 +47,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent-glow);
+  background: var(--selection);
   color: var(--heading);
 }
 
@@ -63,7 +66,7 @@ body {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
 }
 
-/* Card surface with a hairline gradient border. */
+/* Card surface with a hairline border. */
 .card {
   position: relative;
   background: var(--surface);

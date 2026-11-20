@@ -34,7 +34,7 @@ export function ZoomableImage({ src, alt, width, height, sizes }: Props) {
         onClick={(e) => {
           if (e.target === e.currentTarget) dialog.current?.close();
         }}
-        className="m-auto max-h-[92vh] max-w-[min(96vw,1600px)] overflow-visible bg-transparent p-0 backdrop:bg-bg/85 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[92vh] max-w-[min(96vw,1600px)] overflow-visible bg-transparent p-0 backdrop:bg-bg/90"
       >
         <div className="relative">
           <Image

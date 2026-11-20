@@ -7,12 +7,8 @@ export function ResearchTeaser() {
   return (
     <section aria-labelledby="research-title" className="py-8 sm:py-10">
       <Container>
-        <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line bg-gradient-to-br from-surface via-raised to-surface px-6 py-10 sm:px-12 sm:py-12">
+        <Reveal className="relative isolate overflow-hidden rounded-3xl border border-line bg-surface px-6 py-10 sm:px-12 sm:py-12">
           <div aria-hidden className="bg-grid absolute inset-0 -z-10 opacity-60" />
-          <div
-            aria-hidden
-            className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
-          />
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex justify-center">
               <Eyebrow>

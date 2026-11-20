@@ -7,17 +7,9 @@ export function Hero() {
     <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pb-10 pt-24 sm:pb-14 sm:pt-28">
       {/* Background: grid and soft glows */}
       <div aria-hidden className="bg-grid absolute inset-0 -z-10" />
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-[-12rem] -z-10 h-[34rem] w-[min(60rem,140vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
-      />
-      <div
-        aria-hidden
-        className="absolute right-[-8rem] top-40 -z-10 h-80 w-80 rounded-full bg-[radial-gradient(closest-side,var(--accent-soft),transparent)]"
-      />
 
       <Container className="flex flex-col items-start">
-        <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-sm text-accent">
+        <p className="rise rise-1 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 text-sm text-accent">
           <span aria-hidden className="size-2 rounded-full bg-status pulse-dot" />
           {profile.status}
         </p>

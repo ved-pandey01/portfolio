@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     url: "/",
     siteName: profile.name,
     title: seo.title,
-    description: seo.description,
+    description: seo.shareDescription,
   },
-  twitter: { card: "summary_large_image", title: seo.title, description: seo.description },
+  twitter: { card: "summary_large_image", title: seo.title, description: seo.shareDescription },
 };
 
 export const viewport: Viewport = {

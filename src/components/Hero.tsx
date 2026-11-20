@@ -33,7 +33,7 @@ export function Hero() {
         </p>
 
         <p className="rise rise-3 mt-5 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
-          <span className="text-body">{profile.positioning}</span> {profile.intro}
+          <span className="text-body">{profile.keyLine}</span>
         </p>
 
         <div className="rise rise-4 mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">

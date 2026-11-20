@@ -23,9 +23,8 @@ export default function RecruitersPage() {
       <Container className="max-w-4xl">
         <Eyebrow>For recruiters</Eyebrow>
         <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{profile.name}</h1>
-        <p className="mt-3 text-lg text-muted">
-          {profile.role} · {profile.location}
-        </p>
+        <p className="mt-4 text-xl text-body sm:text-2xl">{profile.keyLine}</p>
+        <p className="mt-2 font-mono text-sm text-muted">{profile.subline}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={profile.cv} download className="no-print">
             <Download size={16} aria-hidden /> Download CV
@@ -50,7 +49,34 @@ export default function RecruitersPage() {
           </ul>
         </section>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <section aria-labelledby="why-title" className="mt-10">
+          <h2 id="why-title" className="font-mono text-xs uppercase tracking-widest text-accent">
+            {recruiter.whyHireTitle}
+          </h2>
+          <ul className="mt-5 grid gap-4 md:grid-cols-3">
+            {recruiter.whyHire.map((w) => (
+              <li key={w.title} className="card p-5 sm:p-6">
+                <h3 className="font-display text-lg font-semibold text-ink">{w.title}</h3>
+                <p className="mt-2 text-muted">{w.body}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="can-do-title" className="mt-10">
+          <h2 id="can-do-title" className="font-mono text-xs uppercase tracking-widest text-accent">
+            {recruiter.capabilitiesTitle}
+          </h2>
+          <ul className="mt-5 flex flex-wrap gap-2">
+            {recruiter.capabilities.map((c) => (
+              <li key={c} className="rounded-full border border-line bg-surface px-4 py-2 text-sm text-ink">
+                {c}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           <section aria-labelledby="facts-title" className="card p-6 sm:p-8">
             <h2 id="facts-title" className="font-mono text-xs uppercase tracking-widest text-accent">
               Key facts

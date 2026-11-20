@@ -24,8 +24,8 @@ export const profile = {
     lead: "I don’t just sell.",
     accent: "I build the systems that sell.",
   },
-  intro:
-    "Business development background, engineer’s habits. I build AI research agents and lead engines that give sales teams back their time.",
+  // Key line: hero intro, /recruiters subtitle and social-sharing description.
+  keyLine: "A business developer who builds his own sales systems.",
   status: "Open to SDR/BDR and GTM roles in the UK",
 
   email: "vedpandey0108@gmail.com",
@@ -48,6 +48,8 @@ export const seo = {
   title: "Ved Prakash Pandey | The SDR who builds his own tools",
   description:
     "Business Development professional moving into GTM Engineering. I build AI account research agents and inbound lead engines. Based in Bedford, UK.",
+  // Social-sharing (Open Graph and X) description for the home page.
+  shareDescription: "A business developer who builds his own sales systems.",
   recruitersTitle: "Recruiter summary | Ved Prakash Pandey",
   recruitersDescription:
     "A 30-second summary of Ved Prakash Pandey: key facts, CV and contact details.",
@@ -230,14 +232,32 @@ export const toolkit: { name: string; icon?: string }[] = [
 export const recruiter = {
   title: "The 30-second version",
   summary: [
-    "Business Development professional moving into GTM Engineering.",
-    "Track record in business development: client satisfaction from 72% to 89%, engagement up 200%, promoted within six months, and a Roche Diabetic Care partnership.",
-    "Builds his own sales tooling: an AI account research agent and an automated inbound lead engine.",
+    "I\u2019ve sold, so I know where sales time is lost: research, lead triage and follow-ups.",
+    "Now I build the systems that fix it, with AI research agents and automated lead engines.",
+    "Proven in business development: client satisfaction from 72% to 89%, engagement up 200%, promoted within six months, and a Roche Diabetic Care partnership.",
+    "Ready for SDR/BDR roles today, and growing into GTM Engineering.",
+  ],
+  whyHireTitle: "Why hire me",
+  whyHire: [
+    { title: "I know the job I\u2019m automating.", body: "Business development taught me what reps actually need." },
+    { title: "I build, not just suggest.", body: "WhyNow and the Inbound Lead Engine are real, working tools on GitHub." },
+    { title: "I speak sales and systems.", body: "I talk pipeline with sales leaders and workflows, data and CRM with ops." },
+  ],
+  capabilitiesTitle: "What I can do for your team",
+  capabilities: [
+    "Account research",
+    "Lead scoring and routing",
+    "AI-personalised outreach",
+    "HubSpot workflows",
+    "n8n and Clay automation",
+    "Pipeline reporting",
   ],
   facts: [
     { label: "Location", value: "Bedford, UK" },
     { label: "Looking for", value: "SDR/BDR and GTM roles in the UK" },
     { label: "Education", value: "MSc International Business, Anglia Ruskin" },
+    { label: "MSc result", value: "100/100 in Finance module" },
+    { label: "Certification", value: "HubSpot Sales Hub Software" },
     { label: "Toolkit", value: "Clay, n8n, HubSpot, Python, Claude Code, Gemini" },
     // PLACEHOLDER: confirm your right to work status, or delete this line.
     { label: "Right to work", value: "PLACEHOLDER" },

@@ -77,6 +77,11 @@ export function Hero() {
               </a>
             </li>
             <li>
+              <a href={mailtoHref} className={quietLink}>
+                <Mail size={14} aria-hidden /> Email
+              </a>
+            </li>
+            <li>
               <Link href="/recruiters" className={quietLink}>
                 <FileText size={14} aria-hidden /> Recruiter one-pager
               </Link>

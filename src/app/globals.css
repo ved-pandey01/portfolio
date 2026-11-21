@@ -307,3 +307,8 @@ body::after {
 @media print {
   .section-glow, .section-divider, .rising-glow { display: none !important; }
 }
+
+/* Phones: body text at least 16px with 1.6 line height. */
+@media (max-width: 767px) {
+  body { font-size: 16px; line-height: 1.6; }
+}

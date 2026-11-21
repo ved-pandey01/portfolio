@@ -35,7 +35,7 @@ export function ProductDetails({ study }: { study: CaseStudy }) {
           {d.items.map((item) => {
             const Icon = ICONS[item.icon] ?? Layers;
             return (
-              <li key={item.label} className="flex gap-3 text-sm text-body">
+              <li key={item.label} className="flex gap-3 text-base leading-[1.6] text-body md:text-sm md:leading-normal">
                 <Icon size={16} aria-hidden className="mt-0.5 shrink-0 text-accent" />
                 <span>{item.label}</span>
               </li>

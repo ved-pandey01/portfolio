@@ -85,7 +85,7 @@ export default function RecruitersPage() {
               {recruiter.facts.map((f) => (
                 <div key={f.label} className="grid grid-cols-[7.5rem_1fr] gap-3 py-3">
                   <dt className="text-sm text-muted">{f.label}</dt>
-                  <dd className="text-sm text-ink">{f.value}</dd>
+                  <dd className="text-base leading-[1.6] text-ink md:text-sm md:leading-normal">{f.value}</dd>
                 </div>
               ))}
             </dl>
@@ -96,7 +96,7 @@ export default function RecruitersPage() {
             </h2>
             <ul className="mt-5 divide-y divide-line">
               {stats.map((s) => (
-                <li key={s.label} className="py-3 text-sm text-ink">
+                <li key={s.label} className="py-3 text-base text-ink md:text-sm">
                   {statText(s)}
                 </li>
               ))}

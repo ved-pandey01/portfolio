@@ -26,7 +26,7 @@ export function ResearchTeaser() {
             <p className="mt-4 text-lg text-muted">{researchTeaser.body}</p>
 
             <ResearchForm />
-            <p id="research-note" className="mt-4 text-sm text-muted">
+            <p id="research-note" className="mt-4 text-base text-muted md:text-sm">
               {researchTeaser.note}
             </p>
             <a

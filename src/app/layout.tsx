@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { Providers } from "@/components/Providers";
 import { profile, seo, siteUrl } from "@/content/site";
-import { cssVariables, palette } from "@/theme/palette";
+import { palette, paletteCss } from "@/theme/palette";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -43,11 +43,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en-GB"
-      className={`${inter.variable} ${display.variable} ${serif.variable}`}
-      style={cssVariables}
-    >
+    <html lang="en-GB" className={`${inter.variable} ${display.variable} ${serif.variable}`}>
+      <head>
+        <style id="palette" dangerouslySetInnerHTML={{ __html: paletteCss }} />
+      </head>
       <body className="min-h-screen overflow-x-hidden">
         <a
           href="#main"

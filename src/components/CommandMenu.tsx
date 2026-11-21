@@ -57,7 +57,7 @@ export function CommandMenu() {
   ];
 
   const work: Action[] = caseStudies.flatMap((c) => [
-    { label: c.name, hint: "Case study", icon: <Briefcase size={16} />, run: () => router.push(`/#${c.id}`) },
+    { label: c.name, hint: "Case study", icon: <Briefcase size={16} />, run: () => router.push(`/work/${c.id}`) },
     ...c.links
       .filter((l) => !l.placeholder)
       .map((l) => ({
@@ -132,7 +132,7 @@ export function CommandMenu() {
           ))}
         </Command.List>
       </Command.Dialog>
-      <div role="status" aria-live="polite" className="pointer-events-none fixed bottom-6 left-1/2 z-[95] -translate-x-1/2">
+      <div role="status" aria-live="polite" className="pointer-events-none fixed bottom-24 left-1/2 z-[95] -translate-x-1/2 md:bottom-6">
         {toast ? (
           <span className="rounded-full border border-accent/40 bg-raised px-4 py-2 text-sm text-ink shadow-lg">{toast}</span>
         ) : null}

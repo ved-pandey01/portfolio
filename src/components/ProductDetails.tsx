@@ -28,7 +28,7 @@ export function ProductDetails({ study }: { study: CaseStudy }) {
   const d = study.details;
   return (
     <section aria-label={`${study.name} product details`} className="card depth depth-static p-6">
-      <h4 className="font-mono text-xs uppercase tracking-widest text-accent">{d.title}</h4>
+      <h2 className="font-mono text-xs uppercase tracking-widest text-accent">{d.title}</h2>
 
       {d.kind === "features" ? (
         <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">

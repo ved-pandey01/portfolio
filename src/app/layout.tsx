@@ -3,6 +3,7 @@ import { Inter, Inter_Tight, Instrument_Serif } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { CommandMenu } from "@/components/CommandMenu";
 import { Footer } from "@/components/Footer";
+import { MobileTabBar } from "@/components/MobileTabBar";
 import { Nav } from "@/components/Nav";
 import { Providers } from "@/components/Providers";
 import { profile, seo, siteUrl } from "@/content/site";
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <style id="palette" dangerouslySetInnerHTML={{ __html: paletteCss }} />
       </head>
-      <body className="min-h-screen overflow-x-hidden">
+      <body className="min-h-screen overflow-x-hidden pb-20 md:pb-0">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-button focus:px-4 focus:py-2 focus:text-button-text"
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
           <Footer />
           <CommandMenu />
+          <MobileTabBar />
         </Providers>
         <Analytics />
       </body>

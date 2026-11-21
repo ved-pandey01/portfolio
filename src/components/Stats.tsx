@@ -16,7 +16,7 @@ export function Stats() {
               style={{ animationDelay: `${0.4 + i * 0.08}s` }}
             >
               <p className="text-sm text-muted">{s.label}</p>
-              <p className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+              <p className="mt-3 whitespace-nowrap font-display text-[1.75rem] font-semibold tracking-tight text-ink min-[400px]:text-4xl sm:text-5xl">
                 {s.kind === "number" ? (
                   <CountUp from={s.from} to={s.to} prefix={s.prefix} suffix={s.suffix} />
                 ) : (

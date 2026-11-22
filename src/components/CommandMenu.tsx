@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   ArrowRight,
   Briefcase,
+  CalendarDays,
   Copy,
   Download,
   FileText,
@@ -81,6 +82,7 @@ export function CommandMenu() {
         });
       },
     },
+    { label: "Book a call", hint: "15 minutes", icon: <CalendarDays size={16} />, run: () => openUrl(profile.bookingUrl) },
     { label: "LinkedIn", icon: <LinkedinIcon size={16} />, run: () => openUrl(profile.linkedin) },
     { label: "GitHub", icon: <GithubIcon size={16} />, run: () => openUrl(profile.github) },
   ];

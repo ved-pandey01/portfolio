@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Mail } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Download, Mail } from "lucide-react";
 import { contact, mailtoHref, profile } from "@/content/site";
 import { CopyEmail } from "./CopyEmail";
 import { GithubIcon, LinkedinIcon } from "./Icons";
@@ -21,6 +21,7 @@ export function ContactLinks() {
         <CopyEmail email={profile.email} />
       </li>
       {[
+        { label: "Book a call", value: "15-minute call", href: profile.bookingUrl, icon: <CalendarDays size={20} aria-hidden className="text-accent" /> },
         { label: "LinkedIn", value: "Ved Prakash Pandey", href: profile.linkedin, icon: <LinkedinIcon size={20} className="text-accent" /> },
         { label: "GitHub", value: "ved-pandey01", href: profile.github, icon: <GithubIcon size={20} className="text-accent" /> },
       ].map((l) => (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, Download, FileText, Mail } from "lucide-react";
+import { ArrowDown, CalendarDays, Download, FileText, Mail } from "lucide-react";
 import { mailtoHref, now, profile } from "@/content/site";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { ButtonLink, Container } from "./ui";
@@ -79,6 +79,11 @@ export function Hero() {
             <li>
               <a href={mailtoHref} className={quietLink}>
                 <Mail size={14} aria-hidden /> Email
+              </a>
+            </li>
+            <li>
+              <a href={profile.bookingUrl} target="_blank" rel="noopener noreferrer" className={quietLink}>
+                <CalendarDays size={14} aria-hidden /> Book a call<span className="sr-only"> (opens in a new tab)</span>
               </a>
             </li>
             <li>

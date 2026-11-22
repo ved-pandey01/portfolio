@@ -33,6 +33,7 @@ export const profile = {
   emailSubject: "Hello Ved, saw your portfolio",
   linkedin: "https://www.linkedin.com/in/ved-prakash-pandey-954493202/",
   github: "https://github.com/ved-pandey01",
+  bookingUrl: "https://cal.com/vedpandey/15min", // "Book a call" (opens in a new tab)
 
   // CV file: public/cv/Ved-Prakash-Pandey-CV.pdf (replace it to update; keep the file name).
   cv: "/cv/Ved-Prakash-Pandey-CV.pdf",

@@ -7,10 +7,8 @@ import { ButtonLink, Container } from "./ui";
 
 const quietLink = "inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent";
 
-// Desktop only: the photo on the right, with the "Currently building" card (first Now item)
-// overlapping its bottom-left as a small glass card.
+// Desktop only: the photo on the right, with a slim "Now building" pill directly under it.
 function HeroPhoto() {
-  const item = now.items[0];
   return (
     <div className="photo-in relative hidden shrink-0 lg:block" style={{ width: 360 }}>
       <div aria-hidden className="hero-photo-glow" />
@@ -18,19 +16,12 @@ function HeroPhoto() {
         <Headshot crop="portrait" width={360} height={440} />
         <div aria-hidden className="hero-photo-rim" />
       </div>
-      {item ? (
-        <aside
-          aria-label="Currently building"
-          className="absolute -left-12 bottom-6 w-[16.5rem] rounded-2xl border border-line bg-raised/70 p-4 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.8)] backdrop-blur-md"
-        >
-          <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-muted">
-            <span aria-hidden className="size-2 rounded-full bg-status pulse-dot" />
-            Currently building
-          </p>
-          <p className="mt-2 font-display text-base font-semibold text-ink">{item.title}</p>
-          <p className="mt-1 text-sm leading-snug text-muted">{item.detail}</p>
-        </aside>
-      ) : null}
+      <p className="mt-3 flex w-full items-center justify-center gap-2.5 rounded-full border border-accent/40 bg-raised/60 px-4 py-2 font-mono text-xs text-body backdrop-blur-md">
+        <span aria-hidden className="size-2 shrink-0 rounded-full bg-status pulse-dot" />
+        <span>
+          Now building <span aria-hidden className="text-accent">·</span> {now.heroLabel}
+        </span>
+      </p>
     </div>
   );
 }

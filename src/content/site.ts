@@ -228,6 +228,8 @@ export const whynowUrl: string | null = null;
 // Now: what I'm building this month. Edit freely.
 // ---------------------------------------------------------------------------
 export const now = {
+  // Short label for the desktop hero pill ("Now building · ..."). Keep in step with the first item.
+  heroLabel: "WhyNow live",
   updated: "November 2026", // Update when you edit the list.
   items: [
     { title: "Taking WhyNow live", detail: "A free AI research desk for any UK company. Next: markets beyond the UK." },

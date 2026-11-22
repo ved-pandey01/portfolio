@@ -320,7 +320,7 @@ body::after {
    rim light along the top edge, gentle fade-in (off with reduced motion). */
 .hero-photo-glow {
   position: absolute;
-  inset: -6rem -5rem;
+  inset: -5rem -4rem;
   z-index: -1;
   border-radius: 9999px;
   background: radial-gradient(closest-side, var(--photo-glow), transparent);

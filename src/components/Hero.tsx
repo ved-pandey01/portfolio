@@ -10,10 +10,10 @@ const quietLink = "inline-flex items-center gap-1.5 text-sm text-muted transitio
 // Desktop only: the photo on the right, with a slim "Now building" pill directly under it.
 function HeroPhoto() {
   return (
-    <div className="photo-in relative hidden shrink-0 lg:block" style={{ width: 360 }}>
+    <div className="photo-in relative hidden shrink-0 lg:block" style={{ width: 300 }}>
       <div aria-hidden className="hero-photo-glow" />
       <div className="hero-photo-frame relative">
-        <Headshot crop="portrait" width={360} height={440} />
+        <Headshot crop="portrait" width={300} height={367} />
         <div aria-hidden className="hero-photo-rim" />
       </div>
       <p className="mt-3 flex w-full items-center justify-center gap-2.5 rounded-full border border-accent/40 bg-raised/60 px-4 py-2 font-mono text-xs text-body backdrop-blur-md">

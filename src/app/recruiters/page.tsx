@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Download } from "lucide-react";
 import { ContactLinks } from "@/components/Contact";
+import { Headshot } from "@/components/Headshot";
 import { ButtonLink, Container, Eyebrow } from "@/components/ui";
 import { profile, recruiter, seo, stats } from "@/content/site";
 
@@ -21,8 +22,13 @@ export default function RecruitersPage() {
     <main id="main" className="relative isolate pb-16 pt-24 sm:pt-28">
       <div aria-hidden className="bg-dots absolute inset-x-0 top-0 -z-10 h-[32rem]" />
       <Container className="max-w-4xl">
-        <Eyebrow>For recruiters</Eyebrow>
-        <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{profile.name}</h1>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
+          <Headshot crop="face" width={120} height={120} priority className="photo-ring shrink-0 rounded-full" />
+          <div>
+            <Eyebrow>For recruiters</Eyebrow>
+            <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{profile.name}</h1>
+          </div>
+        </div>
         <p className="mt-4 text-xl text-body sm:text-2xl">{profile.keyLine}</p>
         <p className="mt-2 font-mono text-sm text-muted">{profile.subline}</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

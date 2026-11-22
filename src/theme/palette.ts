@@ -50,6 +50,9 @@ const alpha = {
   contourLine: 0.05, // upward contour lines behind the stats
   divider: 0.35, // fading hairline between sections (at its brightest point)
   frameBorder: 0.5, // champagne border around case study screenshots
+  photoGlow: 0.07, // champagne glow behind the hero photo
+  photoRim: 0.45, // rim light along the top edge of the hero photo (from `heading`)
+  photoRing: 0.6, // thin champagne ring around the round photos
 };
 
 // Phones only (under 768px): brighter text and borders so nothing looks faded on small screens.
@@ -107,6 +110,9 @@ function variables(p: typeof palette, a: typeof alpha): Record<string, string> {
     "--contour-line": rgba(p.accent, a.contourLine),
     "--divider": rgba(p.accent, a.divider),
     "--frame-border": rgba(p.accent, a.frameBorder),
+    "--photo-glow": rgba(p.accent, a.photoGlow),
+    "--photo-rim": rgba(p.heading, a.photoRim),
+    "--photo-ring": rgba(p.accent, a.photoRing),
   };
 }
 

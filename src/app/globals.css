@@ -312,3 +312,38 @@ body::after {
 @media (max-width: 767px) {
   body { font-size: 16px; line-height: 1.6; }
 }
+
+/* Headshot: light warm grade (CSS only, skin stays natural). */
+.headshot-grade { filter: sepia(0.08) saturate(0.9); }
+
+/* Hero photo (desktop): bottom 40% fades into the page, champagne glow behind,
+   rim light along the top edge, gentle fade-in (off with reduced motion). */
+.hero-photo-glow {
+  position: absolute;
+  inset: -6rem -5rem;
+  z-index: -1;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, var(--photo-glow), transparent);
+  pointer-events: none;
+}
+.hero-photo-frame {
+  border-radius: 20px 20px 0 0;
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
+.hero-photo-rim {
+  position: absolute;
+  inset-inline: 12px;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--photo-rim) 50%, transparent);
+  pointer-events: none;
+}
+@keyframes photo-in {
+  from { opacity: 0.01; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.photo-in { animation: photo-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both; }
+
+/* Round photos (phones and /recruiters): thin champagne ring. */
+.photo-ring { box-shadow: 0 0 0 1px var(--photo-ring), 0 0 0 4px var(--bg), 0 0 0 5px color-mix(in srgb, var(--photo-ring) 35%, transparent); }

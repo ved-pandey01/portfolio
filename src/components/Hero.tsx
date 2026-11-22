@@ -1,24 +1,37 @@
 import Link from "next/link";
 import { ArrowDown, CalendarDays, Download, FileText, Mail } from "lucide-react";
 import { mailtoHref, now, profile } from "@/content/site";
+import { Headshot } from "./Headshot";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { ButtonLink, Container } from "./ui";
 
 const quietLink = "inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent";
 
-// Desktop-only card: the first item of the Now list, so it always matches that section.
-function CurrentlyBuilding() {
+// Desktop only: the photo on the right, with the "Currently building" card (first Now item)
+// overlapping its bottom-left as a small glass card.
+function HeroPhoto() {
   const item = now.items[0];
-  if (!item) return null;
   return (
-    <aside aria-label="Currently building" className="rise rise-3 card depth hidden w-[21rem] shrink-0 p-6 lg:block">
-      <p className="flex items-center gap-2.5 font-mono text-xs uppercase tracking-widest text-muted">
-        <span aria-hidden className="size-2 rounded-full bg-status pulse-dot" />
-        Currently building
-      </p>
-      <p className="mt-4 font-display text-xl font-semibold text-ink">{item.title}</p>
-      <p className="mt-1.5 text-muted">{item.detail}</p>
-    </aside>
+    <div className="photo-in relative hidden shrink-0 lg:block" style={{ width: 360 }}>
+      <div aria-hidden className="hero-photo-glow" />
+      <div className="hero-photo-frame relative">
+        <Headshot crop="portrait" width={360} height={440} />
+        <div aria-hidden className="hero-photo-rim" />
+      </div>
+      {item ? (
+        <aside
+          aria-label="Currently building"
+          className="absolute -left-12 bottom-6 w-[16.5rem] rounded-2xl border border-line bg-raised/70 p-4 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.8)] backdrop-blur-md"
+        >
+          <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-muted">
+            <span aria-hidden className="size-2 rounded-full bg-status pulse-dot" />
+            Currently building
+          </p>
+          <p className="mt-2 font-display text-base font-semibold text-ink">{item.title}</p>
+          <p className="mt-1 text-sm leading-snug text-muted">{item.detail}</p>
+        </aside>
+      ) : null}
+    </div>
   );
 }
 
@@ -38,9 +51,11 @@ export function Hero() {
             {profile.status}
           </p>
 
+          <Headshot crop="face" width={96} height={96} priority className="photo-ring rise rise-2 mt-6 rounded-full lg:hidden" />
+
           <h1
             id="hero-title"
-            className="rise rise-2 mt-6 font-display text-[2rem] font-semibold leading-[1] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.15rem]"
+            className="rise rise-2 mt-5 lg:mt-6 font-display text-[2rem] font-semibold leading-[1] tracking-[-0.035em] text-ink sm:text-5xl lg:text-[3.15rem]"
           >
             {profile.name}
           </h1>
@@ -94,7 +109,7 @@ export function Hero() {
           </ul>
         </div>
 
-        <CurrentlyBuilding />
+        <HeroPhoto />
       </Container>
     </section>
   );

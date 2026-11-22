@@ -34,6 +34,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/ved-prakash-pandey-954493202/",
   github: "https://github.com/ved-pandey01",
   bookingUrl: "https://cal.com/vedpandey/15min", // "Book a call" (opens in a new tab)
+  photo: { src: "/images/ved-headshot.jpg", width: 896, height: 1200, alt: "Ved Prakash Pandey" },
 
   // CV file: public/cv/Ved-Prakash-Pandey-CV.pdf (replace it to update; keep the file name).
   cv: "/cv/Ved-Prakash-Pandey-CV.pdf",

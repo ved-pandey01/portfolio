@@ -34,7 +34,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/ved-prakash-pandey-954493202/",
   github: "https://github.com/ved-pandey01",
 
-  // PLACEHOLDER: replace public/cv/Ved-Prakash-Pandey-CV.pdf with your real CV (keep the file name).
+  // CV file: public/cv/Ved-Prakash-Pandey-CV.pdf (replace it to update; keep the file name).
   cv: "/cv/Ved-Prakash-Pandey-CV.pdf",
 };
 

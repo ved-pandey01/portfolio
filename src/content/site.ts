@@ -18,12 +18,10 @@ export const profile = {
   location: "Bedford, UK",
   // Tagline: tab title and social image.
   positioning: "The builder behind the pipeline.",
-  // Line under the name in the hero.
+  // Mono line under the name on /recruiters.
   subline: "Business Development \u00b7 AI Automation \u00b7 Bedford, UK",
-  headline: {
-    lead: "Business thinking.",
-    accent: "Builder\u2019s hands.",
-  },
+  // Serif italic tagline under the name in the home hero.
+  tagline: "Business thinking, builder\u2019s hands.",
   // Key line: hero intro, /recruiters subtitle, and meta/social descriptions.
   keyLine: "I build AI tools that help businesses grow.",
   status: "Open to SDR/BDR and GTM roles in the UK",

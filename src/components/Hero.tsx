@@ -1,9 +1,9 @@
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
-import { ArrowDown, CalendarDays, Download, FileText, Mail } from "lucide-react";
+import { ArrowDown, Download, Mail, Phone } from "lucide-react";
 import { mailtoHref, now, profile } from "@/content/site";
 import { Headshot } from "./Headshot";
-import { GithubIcon, LinkedinIcon } from "./Icons";
+import { FileCvIcon, GithubIcon, LinkedinLogo } from "./Icons";
 import { ButtonLink, Container } from "./ui";
 
 // Staggered fade-up on load: 60ms between items. The global reduced-motion rule turns it off.
@@ -34,7 +34,7 @@ function HeroPhoto() {
 // 36px icon-only button with a small label on hover and keyboard focus.
 function IconLink({ href, label, external, children }: { href: string; label: string; external?: boolean; children: ReactNode }) {
   const className =
-    "group relative inline-flex size-9 items-center justify-center rounded-full border border-[var(--icon-border)] text-muted transition-colors hover:border-accent/60 hover:text-accent focus-visible:border-accent/60 focus-visible:text-accent";
+    "group relative inline-flex size-9 items-center justify-center rounded-full border border-[var(--icon-border)] text-muted transition-colors hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent";
   const tip = (
     <span
       aria-hidden
@@ -103,17 +103,11 @@ export function Hero() {
             {profile.name}
           </h1>
 
-          <p
-            className="rise mt-3 max-w-3xl font-display text-[1.15rem] font-semibold leading-[1.1] tracking-[-0.025em] text-ink text-balance sm:text-[1.65rem] lg:text-[2rem]"
-            style={stagger(2)}
-          >
-            {profile.headline.lead}{" "}
-            <span className="font-serif text-[1.08em] font-normal italic leading-none tracking-[-0.01em] text-accent">
-              {profile.headline.accent}
-            </span>
+          <p className="rise mt-2 font-serif text-base font-normal italic tracking-normal text-accent lg:text-lg" style={stagger(2)}>
+            {profile.tagline}
           </p>
 
-          <div className="rise mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row" style={stagger(3)}>
+          <div className="rise mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row" style={stagger(3)}>
             <ButtonLink href="#work">
               View work <ArrowDown size={16} aria-hidden />
             </ButtonLink>
@@ -127,19 +121,19 @@ export function Hero() {
 
           <ul aria-label="Profiles and links" className="rise mt-5 flex flex-nowrap gap-2" style={stagger(4)}>
             <IconLink href={profile.linkedin} label="LinkedIn" external>
-              <LinkedinIcon size={15} />
+              <LinkedinLogo size={18} />
             </IconLink>
             <IconLink href={profile.github} label="GitHub" external>
-              <GithubIcon size={15} />
+              <GithubIcon size={18} />
             </IconLink>
             <IconLink href={mailtoHref} label="Email">
-              <Mail size={15} aria-hidden />
+              <Mail size={18} aria-hidden />
             </IconLink>
             <IconLink href={profile.bookingUrl} label="Book a call" external>
-              <CalendarDays size={15} aria-hidden />
+              <Phone size={18} aria-hidden />
             </IconLink>
-            <IconLink href="/recruiters" label="Recruiter one-pager">
-              <FileText size={15} aria-hidden />
+            <IconLink href="/recruiters" label="Recruiter page (CV)">
+              <FileCvIcon size={18} />
             </IconLink>
           </ul>
         </div>

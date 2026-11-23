@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Inter_Tight, Instrument_Serif } from "next/font/google";
+import { DM_Sans, IBM_Plex_Mono, Newsreader, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { CommandMenu } from "@/components/CommandMenu";
 import { Footer } from "@/components/Footer";
@@ -10,15 +10,16 @@ import { profile, seo, siteUrl } from "@/content/site";
 import { palette, paletteCss } from "@/theme/palette";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const display = Inter_Tight({ subsets: ["latin"], variable: "--font-display-face", display: "swap" });
-const serif = Instrument_Serif({
+const body = DM_Sans({ subsets: ["latin"], variable: "--font-body-face", display: "swap" });
+const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display-face", display: "swap" });
+const serif = Newsreader({
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
   variable: "--font-serif-face",
   display: "swap",
 });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono-face", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -44,7 +45,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${display.variable} ${serif.variable}`}>
+    <html lang="en-GB" className={`${body.variable} ${display.variable} ${serif.variable} ${mono.variable}`}>
       <head>
         <style id="palette" dangerouslySetInnerHTML={{ __html: paletteCss }} />
       </head>

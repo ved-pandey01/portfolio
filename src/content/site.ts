@@ -27,6 +27,7 @@ export const profile = {
   // Key line: hero intro, /recruiters subtitle, and meta/social descriptions.
   keyLine: "I build AI tools that help businesses grow.",
   status: "Open to SDR/BDR and GTM roles in the UK",
+  heroStatus: "Open to SDR/BDR and GTM roles \u00b7 Bedford, UK", // shorter status line in the home hero
 
   email: "vedpandey0108@gmail.com",
   // Subject pre-filled on every email link.

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { profile } from "@/content/site";
 
 // Crop areas in the original photo's pixels (896 x 1200). The crop is done with
@@ -13,18 +14,19 @@ const CROPS = {
 type Props = {
   crop: keyof typeof CROPS;
   width: number; // rendered box size in CSS px
-  height: number;
+  height: number | string; // a number, or a CSS length such as "100%" to fill the parent
   className?: string;
   priority?: boolean;
+  style?: CSSProperties;
 };
 
-export function Headshot({ crop, width, height, className = "", priority = false }: Props) {
+export function Headshot({ crop, width, height, className = "", priority = false, style }: Props) {
   const c = CROPS[crop];
   const scale = width / c.w;
   const imgW = Math.round(profile.photo.width * scale);
   const imgH = Math.round(profile.photo.height * scale);
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+    <div className={`relative overflow-hidden ${className}`} style={{ ...style, width, height }}>
       <Image
         src={profile.photo.src}
         alt={profile.photo.alt}

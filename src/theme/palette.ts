@@ -15,6 +15,7 @@ export const palette = {
   surface: "#1B1915", // cards
   raised: "#23201B", // raised surfaces: inputs, chips, hover states
   line: "#302C25", // borders and dividers
+  iconBorder: "#2E2A23", // hero icon-only buttons
   text: "#EDE8DF", // body text
   muted: "#948C7F", // secondary text (#8A8276 nudged lighter to pass WCAG AA on raised surfaces)
   heading: "#F5F1EA", // headings
@@ -79,6 +80,7 @@ function variables(p: typeof palette, a: typeof alpha): Record<string, string> {
     "--surface": p.surface,
     "--raised": p.raised,
     "--line": p.line,
+    "--icon-border": p.iconBorder,
     "--text": p.text,
     "--muted": p.muted,
     "--heading": p.heading,

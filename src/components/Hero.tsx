@@ -16,15 +16,13 @@ function HeroPhoto() {
         <Headshot crop="portrait" width={240} height={293} />
         <div aria-hidden className="hero-photo-rim" />
       </div>
-      {/* One line, never wraps: at least the photo's width, wider if the label needs it, centred under the photo. */}
-      <div className="mt-3 flex justify-center">
-        <p className="flex min-w-full shrink-0 items-center justify-center gap-2.5 whitespace-nowrap rounded-full border border-accent/40 bg-raised/60 px-4 py-2 font-mono text-xs text-body backdrop-blur-md">
-          <span aria-hidden className="size-2 shrink-0 rounded-full bg-status pulse-dot" />
-          <span>
-            Now building <span aria-hidden className="text-accent">·</span> {now.heroLabel}
-          </span>
-        </p>
-      </div>
+      {/* Exactly the photo's width, edges in line with it, one line only. */}
+      <p className="mt-3 flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-full border border-accent/40 bg-raised/60 px-3 py-2 font-mono text-[11px] text-body backdrop-blur-md">
+        <span aria-hidden className="size-2 shrink-0 rounded-full bg-status pulse-dot" />
+        <span>
+          Now building <span aria-hidden className="text-accent">·</span> {now.heroLabel}
+        </span>
+      </p>
     </div>
   );
 }

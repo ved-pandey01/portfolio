@@ -1,11 +1,24 @@
 "use client";
 
 import { animate, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 // Renders the final value on the server (correct without JavaScript),
 // then counts up from `from` the first time it scrolls into view.
-export function CountUp({ from = 0, to, prefix = "", suffix = "" }: { from?: number; to: number; prefix?: string; suffix?: string }) {
+export function CountUp({
+  from = 0,
+  to,
+  prefix = "",
+  suffix = "",
+  prefixNode,
+}: {
+  from?: number;
+  to: number;
+  prefix?: string;
+  suffix?: string;
+  // Optional styled version of the prefix for display; screen readers get the plain `prefix`.
+  prefixNode?: ReactNode;
+}) {
   const wrap = useRef<HTMLSpanElement>(null);
   const num = useRef<HTMLSpanElement>(null);
   const inView = useInView(wrap, { once: true });
@@ -38,7 +51,7 @@ export function CountUp({ from = 0, to, prefix = "", suffix = "" }: { from?: num
         {suffix}
       </span>
       <span aria-hidden>
-        {prefix}
+        {prefixNode ?? prefix}
         <span ref={num}>{to}</span>
         {suffix}
       </span>

@@ -1,4 +1,4 @@
-import { stats } from "@/content/site";
+import { stats, statsLabel } from "@/content/site";
 import { CountUp } from "./CountUp";
 import { Container } from "./ui";
 import { Backdrop } from "./Backdrop";
@@ -8,22 +8,30 @@ export function Stats() {
     <section aria-label="Proof" className="section py-5 sm:py-8">
       <Backdrop divider glow="left" contours />
       <Container>
+        <p className="rise mb-4 font-mono text-[11px] uppercase tracking-[0.18em] text-accent" style={{ animationDelay: "0.36s" }}>
+          {statsLabel}
+        </p>
         <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {stats.map((s, i) => (
             <li
-              key={s.label}
-              className="rise card depth stat-card p-5 sm:p-8"
+              key={s.caption}
+              className="rise card depth stat-card @container p-5 sm:p-8"
               style={{ animationDelay: `${0.4 + i * 0.08}s` }}
             >
-              <p className="text-sm text-muted">{s.label}</p>
-              <p className="mt-3 whitespace-nowrap font-display text-[1.75rem] font-semibold tracking-tight text-ink min-[400px]:text-4xl sm:text-5xl">
+              <p className="stat-value whitespace-nowrap font-display font-semibold tracking-tight text-ink">
                 {s.kind === "number" ? (
-                  <CountUp from={s.from} to={s.to} prefix={s.prefix} suffix={s.suffix} />
+                  <CountUp
+                    from={s.from}
+                    to={s.to}
+                    prefix={s.prefix}
+                    suffix={s.suffix}
+                    prefixNode={s.prefix ? <span className="stat-from">{s.prefix}</span> : undefined}
+                  />
                 ) : (
                   <span>{s.value}</span>
                 )}
               </p>
-              {s.detail ? <p className="mt-2 font-mono text-xs text-accent">{s.detail}</p> : null}
+              <p className="mt-2 text-sm text-[var(--stat-caption)]">{s.caption}</p>
             </li>
           ))}
         </ul>

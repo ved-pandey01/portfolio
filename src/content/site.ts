@@ -58,15 +58,19 @@ export const seo = {
 // ---------------------------------------------------------------------------
 // Proof stats. Numbers count up on scroll. Never add a number that is not true.
 // ---------------------------------------------------------------------------
+// `caption` is the short line on the home page cards; `recruiterLine` is the full line on /recruiters.
 export type Stat =
-  | { kind: "number"; from?: number; to: number; prefix?: string; suffix?: string; label: string; detail?: string }
-  | { kind: "text"; value: string; label: string; detail?: string };
+  | { kind: "number"; from?: number; to: number; prefix?: string; suffix?: string; caption: string; recruiterLine: string }
+  | { kind: "text"; value: string; caption: string; recruiterLine: string };
+
+// Small label shown above the four cards.
+export const statsLabel = "Business Development";
 
 export const stats: Stat[] = [
-  { kind: "number", from: 72, to: 89, suffix: "%", label: "Client satisfaction", detail: "Up from 72%" },
-  { kind: "number", to: 200, suffix: "%", label: "Increase in engagement" },
-  { kind: "number", to: 6, suffix: " months", label: "Promoted within" },
-  { kind: "text", value: "Roche", label: "Diabetic Care partnership" },
+  { kind: "number", from: 72, to: 89, prefix: "72% \u2192 ", suffix: "%", caption: "Client satisfaction", recruiterLine: "Client satisfaction: 89% (up from 72%)" },
+  { kind: "number", to: 200, suffix: "%", caption: "Account engagement", recruiterLine: "Increase in engagement: 200%" },
+  { kind: "number", to: 6, suffix: " months", caption: "To promotion", recruiterLine: "Promoted within: 6 months" },
+  { kind: "text", value: "Roche", caption: "Partnership closed", recruiterLine: "Roche Diabetic Care partnership" },
 ];
 
 // ---------------------------------------------------------------------------

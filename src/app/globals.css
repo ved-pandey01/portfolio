@@ -95,6 +95,13 @@ body {
   to { opacity: 1; transform: none; }
 }
 .rise { animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Stat values: the usual sizes (28px phones, 36px from 400px, 48px from 640px), capped by the
+   card's width (22cqi) so the widest value always fits. The "from" part of a change is quieter. */
+.stat-value { font-size: min(1.75rem, 22cqi); line-height: 1; }
+@media (min-width: 400px) { .stat-value { font-size: min(2.25rem, 22cqi); } }
+@media (min-width: 640px) { .stat-value { font-size: min(3rem, 22cqi); } }
+.stat-from { font-size: 0.5em; font-weight: 500; color: var(--muted); letter-spacing: 0; margin-right: 0.15em; }
 .rise-1 { animation-delay: 0.05s; }
 .rise-2 { animation-delay: 0.15s; }
 .rise-3 { animation-delay: 0.25s; }

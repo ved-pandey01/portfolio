@@ -17,6 +17,7 @@ export const palette = {
   line: "#302C25", // borders and dividers
   iconBorder: "#2E2A23", // hero icon-only buttons
   text: "#EDE8DF", // body text
+  statCaption: "#B5AC9E", // one-line caption under each stat value
   muted: "#948C7F", // secondary text (#8A8276 nudged lighter to pass WCAG AA on raised surfaces)
   heading: "#F5F1EA", // headings
   accent: "#C9B38A", // champagne accent
@@ -83,6 +84,7 @@ function variables(p: typeof palette, a: typeof alpha): Record<string, string> {
     "--icon-border": p.iconBorder,
     "--text": p.text,
     "--muted": p.muted,
+    "--stat-caption": p.statCaption,
     "--heading": p.heading,
     "--accent": p.accent,
     "--accent-hover": p.accentHover,

@@ -12,11 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: seo.recruitersTitle, description: seo.recruitersDescription, url: "/recruiters" },
 };
 
-function statText(s: (typeof stats)[number]) {
-  if (s.kind === "text") return `${s.value} ${s.label}`;
-  return `${s.label}: ${s.prefix ?? ""}${s.to}${s.suffix ?? ""}${s.detail ? ` (${s.detail.toLowerCase()})` : ""}`;
-}
-
 export default function RecruitersPage() {
   return (
     <main id="main" className="relative isolate pb-16 pt-24 sm:pt-28">
@@ -102,8 +97,8 @@ export default function RecruitersPage() {
             </h2>
             <ul className="mt-5 divide-y divide-line">
               {stats.map((s) => (
-                <li key={s.label} className="py-3 text-base text-ink md:text-sm">
-                  {statText(s)}
+                <li key={s.caption} className="py-3 text-base text-ink md:text-sm">
+                  {s.recruiterLine}
                 </li>
               ))}
             </ul>

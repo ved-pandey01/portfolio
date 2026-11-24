@@ -125,14 +125,11 @@ export const caseStudies: CaseStudy[] = [
     nextUp: ["Public live demo", "Markets beyond the UK", "Email capture for extra searches"],
     result: [
       "410 automated tests, run without API keys.",
-      "Live test: 15 of 15 UK companies matched on Companies House.",
-      "0 unsourced claims in the live test: every fact links to its source.",
-      "About 45 seconds per report, against 20 to 30 minutes by hand.",
+      "Sourced account brief in about 45 seconds; 15 of 15 companies matched with 0 unsourced claims in a live test on 18 UK companies.",
       "PDF report, CRM-ready CSV and ranked research for lists of up to 10 companies.",
     ],
     links: [
-      // PLACEHOLDER: live demo URL.
-      { label: "Live demo", href: "#", placeholder: true },
+      { label: "Live demo", href: "https://whynow.streamlit.app" },
       { label: "GitHub", href: "https://github.com/ved-pandey01/whynow" },
     ],
     screenshot: {

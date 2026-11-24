@@ -62,7 +62,7 @@ export function CommandMenu() {
     ...c.links
       .filter((l) => !l.placeholder)
       .map((l) => ({
-        label: `${c.name} on ${l.label}`,
+        label: l.label === "GitHub" ? `${c.name} on GitHub` : `${c.name} ${l.label.toLowerCase()}`,
         icon: l.label === "GitHub" ? <GithubIcon size={16} /> : <Sparkles size={16} />,
         run: () => openUrl(l.href),
       })),

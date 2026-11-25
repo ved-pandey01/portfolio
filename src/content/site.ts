@@ -30,7 +30,7 @@ export const profile = {
   email: "vedpandey0108@gmail.com",
   // Subject pre-filled on every email link.
   emailSubject: "Hello Ved, saw your portfolio",
-  linkedin: "https://www.linkedin.com/in/ved-prakash-pandey-954493202/",
+  linkedin: "https://www.linkedin.com/in/vedprakashpandey01",
   github: "https://github.com/ved-pandey01",
   bookingUrl: "https://cal.com/vedpandey/15min", // "Book a call" (opens in a new tab)
   photo: { src: "/images/ved-headshot.jpg", width: 896, height: 1200, alt: "Ved Prakash Pandey" },

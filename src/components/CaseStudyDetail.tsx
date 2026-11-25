@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import type { CaseStudy } from "@/content/site";
 import { ArchitectureDiagram } from "./ArchitectureDiagram";
 import { FactsBar } from "./FactsBar";
@@ -52,7 +52,7 @@ export function CaseStudyDetail({ study, index }: { study: CaseStudy; index: num
               <ButtonLink key={l.label} href={l.href} variant={l.label === "GitHub" ? "secondary" : "primary"}>
                 {l.label === "GitHub" ? <GithubIcon size={15} /> : null}
                 {l.label}
-                <ArrowUpRight size={15} aria-hidden />
+                {l.label === "Live demo" ? <ArrowRight size={15} aria-hidden /> : <ArrowUpRight size={15} aria-hidden />}
                 <span className="sr-only">(opens in a new tab)</span>
               </ButtonLink>
             ),

@@ -103,6 +103,10 @@ export type CaseStudy = {
     | { kind: "spec"; title: string; rows: { label: string; value: string }[] };
 };
 
+// The live WhyNow app. Research opens it with ?company=<name> (pre-filled, not searched);
+// ?sample=paddle opens the saved Paddle sample report.
+export const whynowUrl = "https://whynow.streamlit.app";
+
 export const caseStudies: CaseStudy[] = [
   {
     id: "whynow",
@@ -129,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
       "PDF report, CRM-ready CSV and ranked research for lists of up to 10 companies.",
     ],
     links: [
-      { label: "Live demo", href: "https://whynow.streamlit.app" },
+      { label: "Live demo", href: whynowUrl },
       { label: "GitHub", href: "https://github.com/ved-pandey01/whynow" },
     ],
     screenshot: {
@@ -209,20 +213,21 @@ export const caseStudies: CaseStudy[] = [
 export const researchTeaser = {
   eyebrow: "Free research",
   title: "Research my company",
-  body: "Type your company and see how I’d prospect it.",
+  body: "Type your company and see how I\u2019d prospect it.",
   inputPlaceholder: "yourcompany.co.uk",
   button: "Research",
-  note: "Free AI research report, sent by me personally.",
-  // Used while whynowUrl is null: Research opens an email draft with these.
+  emptyError: "Type a company name first.",
+  note: "Runs live on WhyNow. 2 free searches a day.",
+  tryLabel: "Try:",
+  tryCompany: "Paddle", // the chip opens the Paddle sample report, like the sample link
+  sampleLabel: "See a sample report (Paddle)",
+  sampleUrl: `${whynowUrl}/?sample=paddle`,
+  // Small secondary link: a report by email instead (mailto with these).
+  emailPrompt: "Prefer a report by email?",
+  emailLink: "Request one",
   emailSubject: "Research request: [company]",
   emailBody: "Hi Ved,\n\nCould you research [company] for me?\n\nThanks,",
-  sampleLabel: "See a sample report (Paddle)",
-  sampleUrl: "https://github.com/ved-pandey01/whynow#sample-report",
 };
-
-// When WhyNow is live, set its URL here (e.g. "https://whynow.example.com"). Research then
-// opens WhyNow with ?company=<name> instead of drafting an email. WhyNow must read that parameter.
-export const whynowUrl: string | null = null;
 
 // ---------------------------------------------------------------------------
 // Now: what I'm building this month. Edit freely.

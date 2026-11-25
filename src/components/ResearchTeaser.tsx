@@ -1,4 +1,4 @@
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { researchTeaser } from "@/content/site";
 import { Reveal } from "./Reveal";
 import { Container, Eyebrow } from "./ui";
@@ -26,18 +26,6 @@ export function ResearchTeaser() {
             <p className="mt-4 text-lg text-muted">{researchTeaser.body}</p>
 
             <ResearchForm />
-            <p id="research-note" className="mt-4 text-base text-muted md:text-sm">
-              {researchTeaser.note}
-            </p>
-            <a
-              href={researchTeaser.sampleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent-hover"
-            >
-              {researchTeaser.sampleLabel} <ArrowUpRight size={14} aria-hidden />
-              <span className="sr-only">(opens in a new tab)</span>
-            </a>
           </div>
         </Reveal>
       </Container>

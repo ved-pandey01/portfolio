@@ -15,7 +15,7 @@ import {
   User,
 } from "lucide-react";
 import { caseStudies, mailtoHref, nav, profile } from "@/content/site";
-import { GithubIcon, LinkedinIcon } from "./Icons";
+import { GithubIcon, LinkedinLogo } from "./Icons";
 
 export const OPEN_COMMAND_MENU = "open-command-menu";
 
@@ -83,7 +83,7 @@ export function CommandMenu() {
       },
     },
     { label: "Book a call", hint: "15 minutes", icon: <CalendarDays size={16} />, run: () => openUrl(profile.bookingUrl) },
-    { label: "LinkedIn", icon: <LinkedinIcon size={16} />, run: () => openUrl(profile.linkedin) },
+    { label: "LinkedIn", icon: <LinkedinLogo size={16} />, run: () => openUrl(profile.linkedin) },
     { label: "GitHub", icon: <GithubIcon size={16} />, run: () => openUrl(profile.github) },
   ];
 

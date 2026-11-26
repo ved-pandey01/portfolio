@@ -112,7 +112,7 @@ export const caseStudies: CaseStudy[] = [
     id: "whynow",
     name: "WhyNow",
     tagline: "AI account research agent. Know the fit. Know the moment.",
-    facts: ["487 tests", "15/15 companies matched", "PDF + CSV export", "3 persona emails", "every fact sourced"],
+    facts: ["480+ tests", "15/15 companies matched", "PDF + CSV export", "3 persona emails", "every fact sourced"],
     stack: ["Python", "Streamlit", "Gemini", "Tavily", "Companies House API"],
     problem:
       "SDRs often spend 20 to 30 minutes researching each account before they write a single line.",
@@ -126,9 +126,9 @@ export const caseStudies: CaseStudy[] = [
       { title: "Reasoning", items: ["Gemini"] },
       { title: "Output", items: ["Fit score", "Signals", "Email"] },
     ],
-    nextUp: ["Public live demo", "Markets beyond the UK", "Email capture for extra searches"],
+    nextUp: ["Markets beyond the UK", "Email capture for extra searches", "Loom walkthrough"],
     result: [
-      "487 automated tests, run without API keys.",
+      "480+ automated tests, run without API keys.",
       "Sourced account brief in about 45 seconds; 15 of 15 companies matched with 0 unsourced claims in a live test on 18 UK companies.",
       "PDF report, CRM-ready CSV and ranked research for lists of up to 10 companies.",
     ],
@@ -237,7 +237,7 @@ export const now = {
   heroLabel: "WhyNow live",
   updated: "November 2026", // Update when you edit the list.
   items: [
-    { title: "Taking WhyNow live", detail: "A free AI research desk for any UK company. Next: markets beyond the UK." },
+    { title: "Growing WhyNow", detail: "Live for any UK company. Next: markets beyond the UK." },
     { title: "Pipeline reporting with SQL", detail: "Turning raw lead data into weekly pipeline insights." },
     { title: "Sharpening my GTM stack", detail: "Clay, n8n, HubSpot and SQL, hands-on every week." },
   ],

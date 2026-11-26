@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { DM_Sans, IBM_Plex_Mono, Newsreader, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { CommandMenu } from "@/components/CommandMenu";
+import { GlowCards } from "@/components/GlowCards";
 import { Footer } from "@/components/Footer";
 import { MobileTabBar } from "@/components/MobileTabBar";
 import { Nav } from "@/components/Nav";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
           <Footer />
           <CommandMenu />
+          <GlowCards />
           <MobileTabBar />
         </Providers>
         <Analytics />

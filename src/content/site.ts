@@ -112,7 +112,7 @@ export const caseStudies: CaseStudy[] = [
     id: "whynow",
     name: "WhyNow",
     tagline: "AI account research agent. Know the fit. Know the moment.",
-    facts: ["410 tests", "15/15 companies matched", "PDF + CSV export", "3 persona emails", "every fact sourced"],
+    facts: ["487 tests", "15/15 companies matched", "PDF + CSV export", "3 persona emails", "every fact sourced"],
     stack: ["Python", "Streamlit", "Gemini", "Tavily", "Companies House API"],
     problem:
       "SDRs often spend 20 to 30 minutes researching each account before they write a single line.",
@@ -128,7 +128,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     nextUp: ["Public live demo", "Markets beyond the UK", "Email capture for extra searches"],
     result: [
-      "410 automated tests, run without API keys.",
+      "487 automated tests, run without API keys.",
       "Sourced account brief in about 45 seconds; 15 of 15 companies matched with 0 unsourced claims in a live test on 18 UK companies.",
       "PDF report, CRM-ready CSV and ranked research for lists of up to 10 companies.",
     ],

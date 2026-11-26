@@ -45,7 +45,7 @@ export default async function WorkPage({ params }: PageProps<"/work/[slug]">) {
           <nav aria-label="More work" className="mt-16 border-t border-line pt-8">
             <Link
               href={`/work/${next.id}`}
-              className="card depth group flex items-center justify-between gap-4 p-6"
+              className="card depth glow-card group flex items-center justify-between gap-4 p-6"
             >
               <span>
                 <span className="block font-mono text-xs uppercase tracking-widest text-muted">Next project</span>

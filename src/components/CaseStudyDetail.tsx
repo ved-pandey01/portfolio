@@ -86,16 +86,18 @@ export function CaseStudyDetail({ study, index }: { study: CaseStudy; index: num
       </Reveal>
 
       <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1fr_1.15fr] lg:gap-12">
-        <Reveal className="card depth p-6">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-accent">Result</h2>
-          <ul className="mt-4 space-y-3">
-            {study.result.map((r) => (
-              <li key={r} className="flex gap-3 text-body">
-                <Check size={18} aria-hidden className="mt-0.5 shrink-0 text-accent" />
-                <span>{r}</span>
-              </li>
-            ))}
-          </ul>
+        <Reveal>
+          <div className="card depth glow-card p-6">
+            <h2 className="font-mono text-xs uppercase tracking-widest text-accent">Result</h2>
+            <ul className="mt-4 space-y-3">
+              {study.result.map((r) => (
+                <li key={r} className="flex gap-3 text-body">
+                  <Check size={18} aria-hidden className="mt-0.5 shrink-0 text-accent" />
+                  <span>{r}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </Reveal>
         <Reveal delay={0.1}>
           {study.loom ? <Loom study={study} /> : <ProductDetails study={study} />}

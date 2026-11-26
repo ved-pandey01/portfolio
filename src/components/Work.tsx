@@ -28,7 +28,7 @@ export function Work() {
           {caseStudies.map((study, i) => (
             <Reveal as="li" key={study.id} delay={i * 0.08}>
               {/* The whole card opens the case study (a stretched link); the live demo button sits above it. */}
-              <article className="card depth group relative flex h-full flex-col overflow-hidden">
+              <article className="card depth glow-card group relative flex h-full flex-col overflow-hidden">
                 {study.screenshot ? (
                   <div className="relative aspect-[16/9] overflow-hidden border-b border-line">
                     <Image

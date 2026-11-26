@@ -117,6 +117,32 @@ body {
 .depth:hover {
   border-color: color-mix(in srgb, var(--accent) 70%, transparent);
 }
+/* Project and case study cards: no border change on hover. The card lifts 3px, its surface
+   brightens and a soft champagne glow sits behind it. On mouse devices a faint light spot
+   follows the pointer (GlowCards sets --mx/--my); it is off for touch and reduced motion. */
+.glow-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.glow-card:hover {
+  border-color: var(--line);
+  background: linear-gradient(180deg, #26231E, #1C1A16);
+  box-shadow: inset 0 1px 0 var(--rim), 0 0 60px rgba(201, 179, 138, 0.12), 0 12px 28px -14px var(--depth-shadow);
+  transform: translateY(-3px);
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(201, 179, 138, 0.08), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .glow-card:hover::before { opacity: 1; }
+}
 /* Large containers (diagram panels, media frames, recruiter panels) keep the depth but not the hover border. */
 .depth-static:hover {
   border-color: var(--line);
